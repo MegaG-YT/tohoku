@@ -1,20 +1,20 @@
 export function Hero() {
   return (
-    <section className="relative px-4 md:px-8 pt-4 md:pt-6">
+    <section className="relative md:px-8 pt-4 md:pt-6">
       <div className="relative">
-        <div className="grid grid-cols-2 md:grid-cols-3 md:grid-rows-2 gap-3 md:gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-3 md:grid-rows-2 md:gap-5">
           {/* Cell 1 — top-left in both layouts */}
-          <div className="aspect-[3/2] bg-gray-300 rounded-tl-2xl md:rounded-tl-3xl" />
+          <div className="aspect-[3/2] bg-gray-300 md:rounded-tl-3xl" />
           {/* Cell 2 — top-right on mobile (2-col), middle on desktop */}
-          <div className="aspect-[3/2] bg-gray-200 rounded-tr-2xl md:rounded-tr-none" />
+          <div className="aspect-[3/2] bg-gray-200" />
           {/* Cell 3 — middle-left on mobile, top-right on desktop */}
           <div className="aspect-[3/2] bg-gray-300 md:rounded-tr-3xl" />
           {/* Cell 4 — middle-right on mobile, bottom-left on desktop */}
           <div className="aspect-[3/2] bg-gray-300 md:rounded-bl-3xl" />
           {/* Cell 5 — bottom-left on mobile, middle on desktop */}
-          <div className="aspect-[3/2] bg-gray-200 rounded-bl-2xl md:rounded-none" />
+          <div className="aspect-[3/2] bg-gray-200 md:rounded-none" />
           {/* Cell 6 — bottom-right in both layouts */}
-          <div className="aspect-[3/2] bg-gray-300 rounded-br-2xl md:rounded-br-3xl" />
+          <div className="aspect-[3/2] bg-gray-300 md:rounded-br-3xl" />
         </div>
 
         {/* Center text overlay */}
