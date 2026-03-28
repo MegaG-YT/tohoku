@@ -104,7 +104,7 @@ export function SmartResilience() {
                   className="bg-white rounded-xl p-5 md:p-6"
                 >
                   {/* Card title */}
-                  <h3 className="text-base md:text-lg font-bold text-[var(--brand-text)] mb-4">
+                  <h3 className="text-base md:text-lg font-bold text-[var(--brand-text)] mb-4 min-h-[2.5rem] md:min-h-[3.5rem] flex items-start">
                     {card.title}
                   </h3>
 
