@@ -34,7 +34,7 @@ export function Landscape() {
             </p>
 
             {/* Decorative line */}
-            <div className="w-12 h-[1px] bg-[var(--brand-accent)] mx-auto mb-4" />
+            <div className="w-36 h-[1px] bg-[var(--brand-accent)] mx-auto mb-4" />
 
             {/* LANDSCAPE title */}
             <h2
