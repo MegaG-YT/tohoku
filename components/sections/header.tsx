@@ -83,7 +83,7 @@ export function Header() {
 
       {/* Nav bar */}
       <nav className="hidden md:block bg-[var(--brand-nav)]">
-        <div className="mx-auto max-w-7xl px-4 flex items-center justify-between border-x border-white/30">
+        <div className="mx-auto max-w-7xl px-4 flex items-center justify-between">
           {NAV_ITEMS.map((item, i) => (
             <a
               key={item.id}
