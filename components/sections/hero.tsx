@@ -4,17 +4,17 @@ export function Hero() {
       <div className="relative">
         <div className="grid grid-cols-2 md:grid-cols-3 md:grid-rows-2 md:gap-5">
           {/* Cell 1 — top-left in both layouts */}
-          <div className="aspect-[3/2] bg-gray-300 md:rounded-tl-3xl" />
+          <div className="aspect-[3/2] bg-gray-300 [clip-path:polygon(0%_0%,97%_0%,99%_100%,0%_103%)] md:[clip-path:none] md:rounded-tl-3xl" />
           {/* Cell 2 — top-right on mobile (2-col), middle on desktop */}
-          <div className="aspect-[3/2] bg-gray-200" />
+          <div className="aspect-[3/2] bg-gray-200 [clip-path:polygon(-3%_0%,100%_0%,100%_97%,-1%_100%)] md:[clip-path:none]" />
           {/* Cell 3 — middle-left on mobile, top-right on desktop */}
-          <div className="aspect-[3/2] bg-gray-300 md:rounded-tr-3xl" />
+          <div className="aspect-[3/2] bg-gray-300 [clip-path:polygon(0%_3%,99%_0%,101%_101%,0%_98%)] md:[clip-path:none] md:rounded-tr-3xl" />
           {/* Cell 4 — middle-right on mobile, bottom-left on desktop */}
-          <div className="aspect-[3/2] bg-gray-300 md:rounded-bl-3xl" />
+          <div className="aspect-[3/2] bg-gray-300 [clip-path:polygon(-1%_0%,100%_-3%,100%_105%,1%_101%)] md:[clip-path:none] md:rounded-bl-3xl" />
           {/* Cell 5 — bottom-left on mobile, middle on desktop */}
-          <div className="aspect-[3/2] bg-gray-200 md:rounded-none" />
+          <div className="aspect-[3/2] bg-gray-200 [clip-path:polygon(0%_-2%,101%_1%,100%_100%,0%_100%)] md:[clip-path:none]" />
           {/* Cell 6 — bottom-right in both layouts */}
-          <div className="aspect-[3/2] bg-gray-300 md:rounded-br-3xl" />
+          <div className="aspect-[3/2] bg-gray-300 [clip-path:polygon(1%_1%,100%_5%,100%_100%,0%_100%)] md:[clip-path:none] md:rounded-br-3xl" />
         </div>
 
         {/* Center text overlay */}
