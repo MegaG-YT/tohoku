@@ -82,7 +82,7 @@ export function SmartResilience() {
                 ? { duration: 0 }
                 : { duration: 0.6, delay: 0.15, ease: "easeOut" }
             }
-            className="bg-[#EAF2FA] rounded-2xl p-6 md:p-10"
+            className="bg-[#E8F4F8] rounded-2xl p-6 md:p-10"
           >
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               {CARDS.map((card, index) => (
@@ -108,25 +108,11 @@ export function SmartResilience() {
                     {card.title}
                   </h3>
 
-                  {/* Placeholder images */}
-                  <div className="space-y-2 mb-4">
-                    <div className="aspect-[16/9] bg-gray-200 rounded-lg flex items-center justify-center">
-                      <span className="text-xs text-gray-400">
-                        Image photo
-                      </span>
-                    </div>
-                    <div className="grid grid-cols-2 gap-2">
-                      <div className="aspect-[4/3] bg-gray-200 rounded-lg flex items-center justify-center">
-                        <span className="text-xs text-gray-400">
-                          Image photo
-                        </span>
-                      </div>
-                      <div className="aspect-[4/3] bg-gray-200 rounded-lg flex items-center justify-center">
-                        <span className="text-xs text-gray-400">
-                          Image photo
-                        </span>
-                      </div>
-                    </div>
+                  {/* Placeholder image */}
+                  <div className="aspect-[16/9] bg-gray-200 rounded-lg flex items-center justify-center mb-4">
+                    <span className="text-xs text-gray-400">
+                      Image photo
+                    </span>
                   </div>
 
                   {/* Description */}
