@@ -15,15 +15,16 @@ export function Hero() {
 
         {/* Center text overlay */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="flex flex-col items-center w-full">
+          {/* White background container — 10px larger than inner content */}
+          <div className="bg-white p-[10px]">
             {/* Gold banner */}
             <div className="bg-[#9e8c5a] py-3 md:py-6 px-4 md:px-10 text-center whitespace-nowrap">
               <p className="text-white tracking-widest" style={{ fontSize: 'clamp(0.75rem, 2.5vw, 1.875rem)', fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 福島市の将来を牽引する街「泉」という選択※
               </p>
             </div>
-            {/* Title on white strip */}
-            <div className="bg-white py-1 md:py-4 px-4 md:px-6 text-center whitespace-nowrap">
+            {/* Title strip — same width, inside the white box */}
+            <div className="py-1 md:py-4 text-center whitespace-nowrap">
               <h1 className="tracking-wider" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 <span className="text-[#9e8c5a] font-medium" style={{ fontSize: 'clamp(1rem, 3vw, 2.25rem)' }}>
                   スマートハイムシティ
