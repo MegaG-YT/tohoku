@@ -88,13 +88,12 @@ export function Header() {
             <Fragment key={item.id}>
               <a
                 href={`#${item.id}`}
-                className="flex-1 text-center text-[var(--brand-nav-foreground)] text-sm font-medium py-3 hover:bg-[var(--brand-accent)] transition-colors"
+                className={`flex-1 text-center text-[var(--brand-nav-foreground)] text-sm font-medium py-3 hover:bg-[var(--brand-accent)] transition-colors skew-x-[-6deg] ${
+                  i < NAV_ITEMS.length - 1 ? "border-r border-white/30" : ""
+                }`}
               >
-                {item.label}
+                <span className="inline-block skew-x-[6deg]">{item.label}</span>
               </a>
-              {i < NAV_ITEMS.length - 1 && (
-                <span className="w-px h-5 bg-white/30 rotate-12 shrink-0" />
-              )}
             </Fragment>
           ))}
         </div>
