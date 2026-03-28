@@ -85,17 +85,17 @@ export function Header() {
       <nav className="hidden md:block bg-[var(--brand-nav)]">
         <div className="mx-auto max-w-7xl px-4 flex items-center justify-between">
           {NAV_ITEMS.map((item, i) => (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              className={`flex-1 text-center text-[var(--brand-nav-foreground)] text-sm font-medium py-3 hover:bg-[var(--brand-accent)] transition-colors border-white/30 ${
-                i < NAV_ITEMS.length - 1 ? "border-r" : ""
-              } ${i === 0 ? "hover:border-l" : ""} ${
-                i === NAV_ITEMS.length - 1 ? "hover:border-r" : ""
-              }`}
-            >
-              {item.label}
-            </a>
+            <div key={item.id} className="flex-1 flex items-center">
+              <a
+                href={`#${item.id}`}
+                className="flex-1 text-center text-[var(--brand-nav-foreground)] text-sm font-medium py-3 hover:bg-[var(--brand-accent)] transition-colors"
+              >
+                {item.label}
+              </a>
+              {i < NAV_ITEMS.length - 1 && (
+                <span className="w-px h-4 bg-white/40 shrink-0 -skew-x-12" />
+              )}
+            </div>
           ))}
         </div>
       </nav>
