@@ -1,7 +1,7 @@
 export function Hero() {
   return (
     <section className="relative px-4 md:px-8 pt-4 md:pt-6">
-      <div className="mx-auto grid grid-cols-3 grid-rows-2 gap-1 md:gap-2">
+      <div className="mx-auto grid grid-cols-3 grid-rows-2 gap-2 md:gap-4">
         {/* Top row */}
         <div className="aspect-[3/2] bg-gray-300 rounded-tl-2xl md:rounded-tl-3xl" />
         <div className="aspect-[3/2] bg-gray-200" />
