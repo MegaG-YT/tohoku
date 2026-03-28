@@ -88,10 +88,12 @@ export function Header() {
             <a
               key={item.id}
               href={`#${item.id}`}
-              className={`flex-1 text-center text-[var(--brand-nav-foreground)] text-sm font-medium py-3 hover:bg-[var(--brand-accent)] transition-colors ${
-                i < NAV_ITEMS.length - 1
-                  ? "border-r border-white/30"
-                  : ""
+              className={`flex-1 text-center text-[var(--brand-nav-foreground)] text-sm font-medium py-3 hover:bg-[var(--brand-accent)] transition-colors border-white/30 ${
+                i === 0
+                  ? "border-l border-r"
+                  : i < NAV_ITEMS.length - 1
+                  ? "border-r"
+                  : "border-r"
               }`}
             >
               {item.label}
