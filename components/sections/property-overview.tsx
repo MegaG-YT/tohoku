@@ -16,12 +16,12 @@ export function PropertyOverview() {
       <SectionWrapper id="property-overview" className="bg-[#FAF0E4]">
         <div className="mx-auto max-w-7xl px-4" ref={ref}>
           {/* Section heading */}
-          <div className="text-center mb-10">
-            <p className="text-sm tracking-widest text-[var(--brand-text-muted)] mb-2">
+          <div className="text-center mb-12 md:mb-16">
+            <p className="text-base md:text-lg lg:text-xl tracking-[0.3em] text-[var(--brand-text-muted)] mb-3">
               物件概要
             </p>
             <h2
-              className="text-3xl md:text-4xl font-serif italic"
+              className="text-5xl md:text-7xl lg:text-8xl font-serif italic"
               style={{ color: "var(--brand-accent)" }}
             >
               Outline
