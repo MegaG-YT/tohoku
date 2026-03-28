@@ -16,7 +16,7 @@ export function Hero() {
         {/* Center text overlay */}
         <div className="absolute inset-0 flex items-center justify-center" style={{ transform: 'translateX(-70px)' }}>
           {/* White background container — 10px larger than inner content */}
-          <div className="bg-white p-[17px] px-[60px]">
+          <div className="bg-white p-[17px]">
             {/* Gold banner */}
             <div className="bg-[#9e8c5a] py-3 md:py-6 px-6 md:px-14 text-center whitespace-nowrap">
               <p className="text-white font-bold tracking-widest" style={{ fontSize: 'clamp(1rem, 3.2vw, 2.5rem)', fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
