@@ -12,7 +12,9 @@ export function PropertyOverview() {
 
   return (
     <>
-      <SectionDivider title="物件概要" />
+      <div style={{ background: "linear-gradient(to bottom, transparent 50%, #FAF0E4 50%)" }}>
+        <SectionDivider title="物件概要" />
+      </div>
       <SectionWrapper id="property-overview" className="bg-[#FAF0E4]">
         <div className="mx-auto max-w-7xl px-4" ref={ref}>
           {/* Section heading */}
