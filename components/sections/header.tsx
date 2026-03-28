@@ -82,16 +82,17 @@ export function Header() {
       </div>
 
       {/* Nav bar */}
-      <nav className="hidden md:block bg-[var(--brand-nav)]">
+      <nav className="hidden md:block bg-[var(--brand-nav)] overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 flex items-center justify-between">
           {NAV_ITEMS.map((item, i) => (
             <div key={item.id} className="flex-1 flex items-center">
               <a
                 href={`#${item.id}`}
-                className="relative flex-1 text-center text-[var(--brand-nav-foreground)] text-sm font-medium py-3 group overflow-hidden"
+                className="relative flex-1 text-center text-[var(--brand-nav-foreground)] text-sm font-medium py-3 group"
               >
                 <span
-                  className="absolute inset-y-0 -left-4 -right-4 bg-[var(--brand-accent)] opacity-0 group-hover:opacity-100 transition-opacity -skew-x-12"
+                  className="absolute inset-y-0 -left-[9px] -right-[9px] bg-[var(--brand-accent)] opacity-0 group-hover:opacity-100 transition-opacity"
+                  style={{ clipPath: "polygon(9px 0%, 100% 0%, calc(100% - 9px) 100%, 0% 100%)" }}
                 />
                 <span className="relative z-10">{item.label}</span>
               </a>
