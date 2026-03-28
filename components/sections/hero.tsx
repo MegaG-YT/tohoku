@@ -1,6 +1,6 @@
 export function Hero() {
   return (
-    <section className="relative md:px-8 pt-4 md:pt-6">
+    <section className="relative md:px-8 md:pt-6">
       <div className="relative">
         <div className="grid grid-cols-2 md:grid-cols-3 md:grid-rows-2 md:gap-5">
           {/* Cell 1 — top-left in both layouts */}
