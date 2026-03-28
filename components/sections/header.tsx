@@ -83,17 +83,15 @@ export function Header() {
 
       {/* Nav bar */}
       <nav className="hidden md:block bg-[var(--brand-nav)]">
-        <div className="mx-auto max-w-7xl px-4 flex items-center justify-between">
+        <div className="mx-auto max-w-7xl px-4 flex items-center justify-between border-x border-white/30">
           {NAV_ITEMS.map((item, i) => (
             <a
               key={item.id}
               href={`#${item.id}`}
-              className={`flex-1 text-center text-[var(--brand-nav-foreground)] text-sm font-medium py-3 hover:bg-[var(--brand-accent)] transition-colors border-white/30 ${
-                i === 0
-                  ? "border-l border-r"
-                  : i < NAV_ITEMS.length - 1
-                  ? "border-r"
-                  : "border-r"
+              className={`flex-1 text-center text-[var(--brand-nav-foreground)] text-sm font-medium py-3 hover:bg-[var(--brand-accent)] transition-colors ${
+                i < NAV_ITEMS.length - 1
+                  ? "border-r border-white/30"
+                  : ""
               }`}
             >
               {item.label}
