@@ -72,17 +72,17 @@ export function Hero() {
           </div>
 
           {/* Hero label — absolute overlay centered over both images */}
-          <div className="absolute inset-0 flex items-center justify-start pl-4 pr-16 pointer-events-none">
+          <div className="absolute inset-0 flex items-center justify-start pl-3 pr-8 pointer-events-none">
             <div className="bg-white py-3 w-full">
-              <div className="bg-[#9e8c5a] py-2 px-4 mx-4 text-center">
-                <p className="text-white font-bold tracking-widest text-xs whitespace-nowrap" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+              <div className="bg-[#9e8c5a] py-2 px-2 mx-3 text-center">
+                <p className="text-white font-bold tracking-widest whitespace-nowrap" style={{ fontSize: 'clamp(8px, 2.4vw, 12px)', fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                   福島市の将来を牽引する街「泉」という選択<sup className="text-[0.5em] align-super">※</sup>
                 </p>
               </div>
               <div className="text-center py-1">
                 <h1 className="font-bold" style={{ letterSpacing: '0.15em', fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
-                  <span className="text-[#9e8c5a] text-lg">スマートハイムシティ</span>
-                  <span className="text-[#333333] text-2xl">泉</span>
+                  <span className="text-[#9e8c5a]" style={{ fontSize: 'clamp(13px, 4vw, 18px)' }}>スマートハイムシティ</span>
+                  <span className="text-[#333333]" style={{ fontSize: 'clamp(17px, 5.5vw, 24px)' }}>泉</span>
                 </h1>
               </div>
             </div>
