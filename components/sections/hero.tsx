@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion"
 
 // 6 images total. Mobile shows 2 slots cycling through all 6 in pairs (3 states).
 // Desktop shows all 6 cells simultaneously.
@@ -27,8 +28,8 @@ const DESKTOP_CELLS = [
 const INTERVAL_MS = 3500
 
 export function Hero() {
-  // 3 states on mobile (pair 0→1→2), 2 states on desktop (A/B per cell)
   const [cycle, setCycle] = useState(0)
+  const prefersReducedMotion = useReducedMotion()
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -42,16 +43,23 @@ export function Hero() {
       <div className="relative">
         {/* Mobile: 2 full-width stacked slots cycling through all 6 images */}
         <div className="grid grid-cols-1 md:hidden">
-          {[0, 1].map(slot => (
-            <div key={slot} className="aspect-[3/2] relative overflow-hidden">
-              {[0, 1, 2].map(state => (
-                <div
-                  key={state}
-                  className={`absolute inset-0 ${IMAGES[state * 2 + slot]} transition-opacity duration-1000 ${cycle === state ? "opacity-100" : "opacity-0"}`}
-                />
-              ))}
-            </div>
-          ))}
+          {[0, 1].map(slot => {
+            const fromRight = slot === 0
+            return (
+              <div key={slot} className="aspect-[3/2] relative overflow-hidden">
+                <AnimatePresence initial={false}>
+                  <motion.div
+                    key={cycle}
+                    className={`absolute inset-0 ${IMAGES[cycle * 2 + slot]}`}
+                    initial={prefersReducedMotion ? { opacity: 0 } : { x: fromRight ? "100%" : "-100%" }}
+                    animate={prefersReducedMotion ? { opacity: 1 } : { x: 0 }}
+                    exit={prefersReducedMotion ? { opacity: 0 } : { x: fromRight ? "-100%" : "100%" }}
+                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                  />
+                </AnimatePresence>
+              </div>
+            )
+          })}
         </div>
 
         {/* Desktop: static 3×2 grid, no cycling */}
