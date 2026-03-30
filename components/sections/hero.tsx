@@ -41,8 +41,8 @@ export function Hero() {
   return (
     <section className="relative md:px-8 md:pt-6">
       <div className="relative">
-        {/* Mobile: slot 0 → label → slot 1 */}
-        <div className="md:hidden">
+        {/* Mobile: 2 stacked images with label overlaid on top */}
+        <div className="md:hidden relative">
           {/* Slot 0 — slides in from right */}
           <div className="aspect-[3/2] relative overflow-hidden">
             <AnimatePresence initial={false}>
@@ -57,21 +57,6 @@ export function Hero() {
             </AnimatePresence>
           </div>
 
-          {/* Hero label — full width, between the two images */}
-          <div className="bg-white py-3 mx-4">
-            <div className="bg-[#9e8c5a] py-2 px-4 mx-6 text-center">
-              <p className="text-white font-bold tracking-widest text-xs whitespace-nowrap" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
-                福島市の将来を牽引する街「泉」という選択<sup className="text-[0.5em] align-super">※</sup>
-              </p>
-            </div>
-            <div className="text-center py-1">
-              <h1 className="font-bold" style={{ letterSpacing: '0.15em', fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
-                <span className="text-[#9e8c5a] text-lg">スマートハイムシティ</span>
-                <span className="text-[#333333] text-2xl">泉</span>
-              </h1>
-            </div>
-          </div>
-
           {/* Slot 1 — slides in from left */}
           <div className="aspect-[3/2] relative overflow-hidden">
             <AnimatePresence initial={false}>
@@ -84,6 +69,23 @@ export function Hero() {
                 transition={{ duration: 0.6, ease: "easeInOut" }}
               />
             </AnimatePresence>
+          </div>
+
+          {/* Hero label — absolute overlay centered over both images */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="bg-white py-3 w-full mx-4">
+              <div className="bg-[#9e8c5a] py-2 px-4 mx-6 text-center">
+                <p className="text-white font-bold tracking-widest text-xs whitespace-nowrap" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+                  福島市の将来を牽引する街「泉」という選択<sup className="text-[0.5em] align-super">※</sup>
+                </p>
+              </div>
+              <div className="text-center py-1">
+                <h1 className="font-bold" style={{ letterSpacing: '0.15em', fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+                  <span className="text-[#9e8c5a] text-lg">スマートハイムシティ</span>
+                  <span className="text-[#333333] text-2xl">泉</span>
+                </h1>
+              </div>
+            </div>
           </div>
         </div>
 
