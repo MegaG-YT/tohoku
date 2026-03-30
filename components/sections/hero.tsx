@@ -126,12 +126,12 @@ export function Hero() {
 
       {/* Sales banner */}
       <div className="mt-4 bg-[#635B51] py-4 md:py-5 px-4 md:px-8 overflow-hidden">
-        <div className="mx-auto max-w-6xl flex flex-wrap md:flex-nowrap items-center justify-center gap-4 md:gap-6 text-white md:whitespace-nowrap" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+        <div className="mx-auto max-w-6xl flex flex-wrap md:flex-nowrap items-center justify-around md:justify-center gap-4 md:gap-6 text-white md:whitespace-nowrap" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
           {/* Row 1 on mobile: 新発売 + 建築条件付 + 全15区画 */}
           <span className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-wider">新発売</span>
           <span className="border-l border-white/40 h-8 md:h-12" />
           <span className="flex items-stretch gap-2">
-            <span className="flex flex-col justify-center gap-3 text-xs md:text-sm lg:text-base text-center leading-none">
+            <span className="flex flex-col justify-center gap-1 text-xs md:text-sm lg:text-base text-center leading-none">
               <span>建　築</span>
               <span>条件付</span>
             </span>
