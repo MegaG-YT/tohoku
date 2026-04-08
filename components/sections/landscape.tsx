@@ -24,10 +24,10 @@ export function Landscape() {
         <div className="mx-auto max-w-7xl px-4" ref={ref}>
           <motion.div {...animate()} className="text-center">
             {/* Heading */}
-            <p className="text-base md:text-lg text-[#1a1a1a] leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+            <p className="text-lg md:text-2xl text-[#1a1a1a] leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
               街全体をデザインする、
             </p>
-            <p className="text-base md:text-lg text-[#1a1a1a] leading-relaxed mb-8" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+            <p className="text-lg md:text-2xl text-[#1a1a1a] leading-relaxed mb-8" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
               セキスイハイムのまちづくり
             </p>
 
@@ -43,10 +43,10 @@ export function Landscape() {
             </h2>
 
             {/* Description */}
-            <p className="text-sm md:text-base text-[#3a3a3a] leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+            <p className="text-base md:text-xl text-[#3a3a3a] leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
               スマートハイムシティ泉では、建物だけでなく街並み全体をデザイン。
             </p>
-            <p className="text-sm md:text-base text-[#3a3a3a] leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+            <p className="text-base md:text-xl text-[#3a3a3a] leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
               統一された外構計画により美しい街並みと快適な暮らしを実現します。
             </p>
           </motion.div>
