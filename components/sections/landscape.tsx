@@ -24,10 +24,10 @@ export function Landscape() {
         <div className="mx-auto max-w-7xl px-4" ref={ref}>
           <motion.div {...animate()} className="text-center">
             {/* Heading */}
-            <p className="text-base md:text-lg text-[#4A4A4A] leading-relaxed">
+            <p className="text-base md:text-lg text-[#4A4A4A] leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
               街全体をデザインする、
             </p>
-            <p className="text-base md:text-lg text-[#4A4A4A] leading-relaxed mb-8">
+            <p className="text-base md:text-lg text-[#4A4A4A] leading-relaxed mb-8" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
               セキスイハイムのまちづくり
             </p>
 
