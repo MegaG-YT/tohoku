@@ -131,22 +131,17 @@ export function AccessSection() {
               <motion.div
                 key={rowIndex}
                 {...animate(0.15 + rowIndex * 0.15)}
-                className="flex flex-col md:flex-row gap-0"
+                className="flex flex-col md:flex-row md:items-stretch gap-0"
               >
                 {/* Photo */}
-                <div className="md:w-2/5">
-                  <div className="relative aspect-[4/3]">
-                    <Image
-                      src={row.image}
-                      alt={row.imageAlt}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 40vw"
-                    />
-                  </div>
-                  <p className="text-[10px] text-white/50 text-right mt-1 pr-1">
-                    Image photo
-                  </p>
+                <div className="md:w-2/5 relative min-h-[200px]">
+                  <Image
+                    src={row.image}
+                    alt={row.imageAlt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 40vw"
+                  />
                 </div>
 
                 {/* Info box */}
