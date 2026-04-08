@@ -6,9 +6,9 @@ import Image from "next/image"
 import { SectionWrapper } from "@/components/shared/section-wrapper"
 
 const SIDEBAR_FACILITIES = [
-  { src: "/images/location-york-benimaru.png", name: "ヨークベニマル", distance: "約740〜820m" },
-  { src: "/images/location-kawachi.png", name: "カワチ薬品 福島西店", distance: "約740〜820m" },
-  { src: "/images/location-seven-eleven.png", name: "セブンイレブン", distance: "約000〜000m" },
+  { src: "/images/location-york-benimaru.png", name: "ヨークベニマル", distance: "約740〜820m", objectPosition: "center" },
+  { src: "/images/location-kawachi.png", name: "カワチ薬品 福島西店", distance: "約740〜820m", objectPosition: "top" },
+  { src: "/images/location-seven-eleven.png", name: "セブンイレブン", distance: "約000〜000m", objectPosition: "bottom" },
 ]
 
 const GRID_FACILITIES = [
@@ -40,12 +40,12 @@ export function SurroundingEnvironment() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6, ease: "easeOut" }}
-              className="text-center mb-8 md:mb-12"
+              className="text-center mb-0 md:mb-12"
             >
-              <p className="text-xl md:text-2xl text-[#4A4A4A] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+              <p className="text-base md:text-2xl text-[#4A4A4A] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 駅も、買い物も、医療も。
               </p>
-              <p className="text-xl md:text-2xl text-[#4A4A4A] leading-relaxed mb-6 font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+              <p className="text-base md:text-2xl text-[#4A4A4A] leading-relaxed mb-6 font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 生活利便施設が500m圏内に。
               </p>
               <h2
@@ -54,13 +54,13 @@ export function SurroundingEnvironment() {
               >
                 LOCATION
               </h2>
-              <p className="text-base md:text-xl text-[#4A4A4A] leading-relaxed font-bold mb-4" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+              <p className="text-xs md:text-xl text-[#4A4A4A] leading-relaxed font-bold md:mb-4" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 「岩代清水」駅のすぐ近くに位置し、
               </p>
-              <p className="text-base md:text-xl text-[#4A4A4A] leading-relaxed font-bold mb-4" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+              <p className="text-xs md:text-xl text-[#4A4A4A] leading-relaxed font-bold md:mb-4" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 徒歩500m圏内に商業施設や医療施設がそろうロケーション
               </p>
-              <p className="text-base md:text-xl text-[#4A4A4A] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+              <p className="text-xs md:text-xl text-[#4A4A4A] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 将来を見据えた、暮らしやすさが魅力の分譲地です。
               </p>
             </motion.div>
@@ -70,25 +70,26 @@ export function SurroundingEnvironment() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6, delay: 0.15, ease: "easeOut" }}
-              className="flex flex-col md:flex-row gap-4 mb-8 md:mb-12"
+              className="flex flex-col md:flex-row gap-4 mb-2 md:mb-12 -mx-4 md:mx-0 mt-4 md:mt-0 pb-4 md:pb-0"
             >
               {/* Map */}
-              <div className="relative w-full md:w-3/4 aspect-[4/3]">
+              <div className="w-full md:relative md:w-3/4 md:aspect-[4/3]">
                 <Image
                   src="/images/location-map.png"
                   alt="スマートハイムシティ泉周辺の地図"
-                  fill
-                  className="object-cover"
+                  width={1200}
+                  height={900}
+                  className="w-full h-auto md:absolute md:inset-0 md:w-full md:h-full md:object-cover"
                 />
               </div>
               {/* Sidebar facilities */}
-              <div className="flex flex-row md:flex-col gap-4 md:w-1/4">
+              <div className="flex flex-row md:flex-col gap-2 md:gap-4 md:w-1/4 px-4 md:px-0">
                 {SIDEBAR_FACILITIES.map((facility) => (
-                  <div key={facility.name} className="flex-1">
+                  <div key={facility.name} className="w-1/3 md:w-auto">
                     <div className="relative aspect-[4/3] overflow-hidden">
-                      <Image src={facility.src} alt={facility.name} fill className="object-cover" />
+                      <Image src={facility.src} alt={facility.name} fill className="object-cover" style={{ objectPosition: facility.objectPosition }} />
                     </div>
-                    <p className="text-xs md:text-sm text-[var(--brand-text)] mt-1 font-bold">{facility.name}</p>
+                    <p className="text-[10px] md:text-sm text-[var(--brand-text)] mt-1 font-bold">{facility.name}</p>
                     <p className="text-[10px] md:text-xs text-[var(--brand-text-muted)]">{facility.distance}</p>
                   </div>
                 ))}
@@ -107,8 +108,8 @@ export function SurroundingEnvironment() {
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <Image src={facility.src} alt={facility.name} fill className="object-cover" />
                   </div>
-                  <p className="text-xs md:text-sm text-[var(--brand-text)] mt-1 font-bold">{facility.name}</p>
-                  <p className="text-[10px] md:text-xs text-[var(--brand-text-muted)]">{facility.distance}</p>
+                  <p className="text-[10px] md:text-sm text-[var(--brand-text)] mt-1 font-bold">{facility.name}</p>
+                  <p className="text-[9px] md:text-xs text-[var(--brand-text-muted)]">{facility.distance}</p>
                 </div>
               ))}
             </motion.div>
