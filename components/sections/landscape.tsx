@@ -134,7 +134,7 @@ export function Landscape() {
                   className="w-full h-auto"
                 />
               </div>
-              <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed">
+              <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 マスタープラン（全体計画）に示す植栽は、大切な景観ポイントです。シンボルツリー等、その他の中木と低木や地被植物を適切に配置し、それらを組み合わせることで美しいまちなみとして周辺環境へと繋がっていきます。
               </p>
             </motion.div>
