@@ -2,36 +2,49 @@
 
 import { useRef } from "react"
 import { motion, useInView, useReducedMotion } from "framer-motion"
+import Image from "next/image"
 import { SectionWrapper } from "@/components/shared/section-wrapper"
 
 const CARDS = [
   {
     title: "エネルギーを創る",
+    image: "/images/smart-solar.png",
+    alt: "太陽光発電パネルを搭載した住宅の屋根",
     description:
       "住まいに太陽光発電を搭載。太陽光を活かして発電し、環境にやさしいエネルギーを暮らしに取り入れることでできるだけ電力を買わない暮らしを目指します。※画像はCGであり、実際の仕様とは異なる場合があります。",
   },
   {
-    title: "スマートハイムナビ（HEMS）を活用する",
+    title: "スマートハイムナビ（HEMS）\nを活用する",
+    image: "/images/smart-hems.png",
+    alt: "スマートハイムナビでエネルギーを管理するタブレット画面",
     description:
       "スマートハイムナビ（HEMS）でエネルギー設備を一元管理し、自宅電力を「見える化」。さらに、家じゅうの機器※1※2とつながり、音声操作や遠隔操作など毎日の安心・快適・便利をお手伝いします。※1)新スマートハイムナビ対応の機種のみ連携可能です。※2)新スマートハイムナビ対応のエコキ",
   },
   {
     title: "停電に備える",
+    image: "/images/smart-battery.png",
+    alt: "e-Pocket GREEN蓄電システム",
     description:
       "日中で発電して余った電力をためておくことができる蓄電システム。災害時にライフラインが途絶えてしまっても、蓄えた電気で復旧することも可能です※。※停電時、蓄電池の残量がない場合は電力を使用できません。また、使用できる範囲は、蓄電池や事前の設計により異なります。同時に使える電力には限りがあります。",
   },
   {
     title: "高断熱で暮らす",
+    image: "/images/smart-insulation.png",
+    alt: "高断熱住宅のキッチンで料理を楽しむ家族",
     description:
       "断熱性が高いと、少しの冷暖房でも快適な温度で暮らせるので、一年中快適です※。電力を有効活用できるので、光熱費の抑制も期待できます。※空調システム用のグリル・ガラリ等を設置しない空調は対象外です。",
   },
   {
     title: "地震に備える",
+    image: "/images/smart-earthquake.png",
+    alt: "耐震性に優れたセキスイハイムの住宅外観イラスト",
     description:
       "独自のユニットテクノロジーで作られた強靭な建物が家族を災害から守ります。分譲地に建つすべての建物が耐震性に優れているからこそ、災害に強いまちに。",
   },
   {
     title: "水害・断水に備える",
+    image: null,
+    alt: "",
     description:
       "雨水を一時貯留してから放流するクロスウェーブ。下水道への排水量が一気に増えることを抑えます※1。飲料水貯留システムは、断水時にも普段に近い暮らしを実現。平常時には新鮮な水道水が入れ替ります※2。※1)特定の大型分譲地のみの仕様となります。※2)4日以上水を使用しなかった場合、貯留水の水質が低下している恐れがあるため、最初の70リットルは飲用以外で使用します。1年に1回を目安に作動と取水の確認を行ってください。",
   },
@@ -45,8 +58,8 @@ export function SmartResilience() {
   return (
     <>
       <SectionWrapper id="smart-resilience">
+        {/* Heading inside max-w container */}
         <div className="mx-auto max-w-7xl px-4" ref={ref}>
-          {/* Heading */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -70,18 +83,20 @@ export function SmartResilience() {
               地球環境の負荷をおさえ災害に備える「まち」づくり
             </p>
           </motion.div>
+        </div>
 
-          {/* Light blue box with card grid */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={
-              prefersReducedMotion
-                ? { duration: 0 }
-                : { duration: 0.6, delay: 0.15, ease: "easeOut" }
-            }
-            className="bg-[#E8F4F8] rounded-2xl p-6 md:p-10"
-          >
+        {/* Light blue box — wider than content */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={
+            prefersReducedMotion
+              ? { duration: 0 }
+              : { duration: 0.6, delay: 0.15, ease: "easeOut" }
+          }
+          className="bg-[#E8F4F8] rounded-2xl mx-4 md:mx-8 lg:mx-16 p-6 md:p-10 lg:p-12"
+        >
+          <div className="mx-auto max-w-7xl">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               {CARDS.map((card, index) => (
                 <motion.div
@@ -99,19 +114,30 @@ export function SmartResilience() {
                           ease: "easeOut",
                         }
                   }
-                  className="bg-white rounded-xl p-5 md:p-6"
                 >
                   {/* Card title */}
-                  <h3 className="text-base md:text-lg font-bold text-[var(--brand-text)] mb-4 min-h-[2.5rem] md:min-h-[3.5rem] flex items-start">
+                  <h3 className="text-sm md:text-base font-bold text-[var(--brand-text)] mb-4 min-h-[2.5rem] md:min-h-[3rem] flex items-center justify-center text-center whitespace-pre-line">
                     {card.title}
                   </h3>
 
-                  {/* Placeholder image */}
-                  <div className="aspect-[16/9] bg-gray-200 rounded-lg flex items-center justify-center mb-4">
-                    <span className="text-xs text-gray-400">
-                      Image photo
-                    </span>
-                  </div>
+                  {/* Image */}
+                  {card.image ? (
+                    <div className="mb-4">
+                      <Image
+                        src={card.image}
+                        alt={card.alt}
+                        width={800}
+                        height={450}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  ) : (
+                    <div className="aspect-[16/9] bg-gray-200 rounded-lg flex items-center justify-center mb-4">
+                      <span className="text-xs text-gray-400">
+                        Image photo
+                      </span>
+                    </div>
+                  )}
 
                   {/* Description */}
                   <p className="text-xs md:text-sm leading-relaxed text-[var(--brand-text-muted)]">
@@ -120,8 +146,8 @@ export function SmartResilience() {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </SectionWrapper>
     </>
   )
