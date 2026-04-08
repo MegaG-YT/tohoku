@@ -145,7 +145,7 @@ export function AccessSection() {
                 </div>
 
                 {/* Info box */}
-                <div className="md:w-3/5 bg-black/40 backdrop-blur-sm p-6 md:p-8 flex flex-col justify-center">
+                <div className="md:w-3/5 bg-black/40 backdrop-blur-sm p-6 md:p-8 flex flex-col justify-center rounded-r-2xl">
                   {row.items.map((item, itemIndex) => (
                     <div key={itemIndex}>
                       {itemIndex > 0 && (
