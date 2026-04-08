@@ -54,13 +54,13 @@ export function SurroundingEnvironment() {
               >
                 LOCATION
               </h2>
-              <p className="text-base md:text-xl text-[var(--brand-text-muted)] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+              <p className="text-base md:text-xl text-[#1a1a1a] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 「岩代清水」駅のすぐ近くに位置し、
               </p>
-              <p className="text-base md:text-xl text-[var(--brand-text-muted)] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+              <p className="text-base md:text-xl text-[#1a1a1a] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 徒歩500m圏内に商業施設や医療施設がそろうロケーション
               </p>
-              <p className="text-base md:text-xl text-[var(--brand-text-muted)] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+              <p className="text-base md:text-xl text-[#1a1a1a] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 将来を見据えた、暮らしやすさが魅力の分譲地です。
               </p>
             </motion.div>
