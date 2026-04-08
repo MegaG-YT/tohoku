@@ -42,25 +42,25 @@ export function SurroundingEnvironment() {
               transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6, ease: "easeOut" }}
               className="text-center mb-8 md:mb-12"
             >
-              <p className="text-xl md:text-2xl text-[#1a1a1a] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+              <p className="text-xl md:text-2xl text-[#4A4A4A] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 駅も、買い物も、医療も。
               </p>
-              <p className="text-xl md:text-2xl text-[#1a1a1a] leading-relaxed mb-6 font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+              <p className="text-xl md:text-2xl text-[#4A4A4A] leading-relaxed mb-6 font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 生活利便施設が500m圏内に。
               </p>
               <h2
-                className="text-4xl md:text-6xl lg:text-7xl tracking-[0.08em] text-[#A8B2BC] mb-8 md:mb-12"
+                className="text-4xl md:text-6xl lg:text-7xl tracking-[0.08em] text-[#b8a468] mb-8 md:mb-12"
                 style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
               >
                 LOCATION
               </h2>
-              <p className="text-base md:text-xl text-[#1a1a1a] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+              <p className="text-base md:text-xl text-[#4A4A4A] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 「岩代清水」駅のすぐ近くに位置し、
               </p>
-              <p className="text-base md:text-xl text-[#1a1a1a] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+              <p className="text-base md:text-xl text-[#4A4A4A] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 徒歩500m圏内に商業施設や医療施設がそろうロケーション
               </p>
-              <p className="text-base md:text-xl text-[#1a1a1a] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+              <p className="text-base md:text-xl text-[#4A4A4A] leading-relaxed font-bold" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 将来を見据えた、暮らしやすさが魅力の分譲地です。
               </p>
             </motion.div>
