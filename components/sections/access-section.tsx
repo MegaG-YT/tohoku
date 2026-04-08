@@ -103,7 +103,7 @@ export function AccessSection() {
               鉄道駅が徒歩圏
             </p>
             <p
-              className="text-base md:text-lg text-[var(--brand-accent)] mb-4"
+              className="text-base md:text-lg text-white mb-4"
               style={{
                 fontFamily:
                   '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif',
