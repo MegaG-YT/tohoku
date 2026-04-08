@@ -113,8 +113,8 @@ export function LotInformation() {
                   alt=""
                   width={5187}
                   height={4519}
-                  className="absolute h-[150%] w-[150%] object-contain"
-                  style={{ top: "-20%", left: "-10%" }}
+                  className="absolute h-[200%] w-[200%] object-contain"
+                  style={{ top: "-35%", left: "-5%" }}
                   sizes="(max-width: 768px) 100vw, 800px"
                   priority={false}
                 />
