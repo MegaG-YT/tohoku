@@ -29,15 +29,16 @@ export function LotInformation() {
 
   return (
     <SectionWrapper id="lot-information" className="py-0 md:py-0">
-      <div
-        ref={ref}
-        className="bg-[#C8C8C8] py-16 md:py-24"
-        style={{
-          backgroundImage:
-            "url(\"data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E\")",
-        }}
-      >
-        <div className="mx-auto max-w-5xl px-4">
+      <div ref={ref} className="relative py-16 md:py-24">
+        <Image
+          src="/images/lot-bg-texture.webp"
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+          priority={false}
+        />
+        <div className="relative z-10 mx-auto max-w-5xl px-4">
           <motion.div
             className="rounded-xl bg-white p-6 shadow-lg md:p-12"
             {...animate(0)}
