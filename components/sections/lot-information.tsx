@@ -72,7 +72,7 @@ export function LotInformation() {
                 >
                   総区画数{" "}
                   <span className="text-3xl font-bold text-[var(--brand-text)] md:text-5xl">
-                    17
+                    15
                   </span>
                   区画
                 </p>

@@ -31,7 +31,7 @@ export function AssetValue() {
             <p className="md:text-lg text-[#707070] leading-relaxed mb-6" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif', fontSize: '1.5rem' }}>
               資産価値としての可能性
             </p>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl tracking-[0.08em] text-[#A8B2BC]" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl tracking-[0.08em] text-[#8AA0B8]" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
               ASSET VALUE
             </h2>
           </motion.div>

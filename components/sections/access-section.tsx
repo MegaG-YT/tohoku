@@ -179,12 +179,12 @@ export function AccessSection() {
           {/* Footnotes */}
           <motion.div
             {...animate(0.45)}
-            className="space-y-1"
+            className="space-y-1 text-right"
           >
             {FOOTNOTES.map((note, index) => (
               <p
                 key={index}
-                className="text-[10px] md:text-xs text-white/50"
+                className="text-[10px] md:text-xs text-white"
               >
                 {note}
               </p>
