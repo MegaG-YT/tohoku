@@ -77,7 +77,7 @@ export function SmartResilience() {
             >
               SMART＆RESILIENCE
             </h2>
-            <p className="text-sm md:text-base text-[var(--brand-text-muted)]" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+            <p className="text-sm md:text-base text-[var(--brand-text)]" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
               地球環境の負荷をおさえ災害に備える「まち」づくり
             </p>
           </div>

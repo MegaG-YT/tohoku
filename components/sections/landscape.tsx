@@ -91,12 +91,14 @@ export function Landscape() {
                   className="object-contain"
                 />
               </div>
-              <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed">
-                建物が無秩序に並ぶと、日照や通風、プライバシーの確保が難しくなるため、まち全体の調和を考えて計画的に建物と庭を配置します。
-              </p>
-              <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed mt-2">
-                デザインガイドラインによりマスタープラン（全体計画）で設定した南庭の位置を守り、建物を配置します。
-              </p>
+              <div className="bg-gray-100 rounded p-4">
+                <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed">
+                  建物が無秩序に並ぶと、日照や通風、プライバシーの確保が難しくなるため、まち全体の調和を考えて計画的に建物と庭を配置します。
+                </p>
+                <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed mt-2">
+                  デザインガイドラインによりマスタープラン（全体計画）で設定した南庭の位置を守り、建物を配置します。
+                </p>
+              </div>
             </motion.div>
 
             {/* Right column - Privacy */}
@@ -112,9 +114,11 @@ export function Landscape() {
                   className="object-contain"
                 />
               </div>
-              <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed">
-                互いに住み良い環境をつくるため、お隣同士の部屋の配置、窓の向き合いを調整することが必要です。隣地建物に面している窓やドアは、マスタープラン（全体計画）で指定されている側をカスミガラスなどの不可視なものにします。
-              </p>
+              <div className="bg-gray-100 rounded p-4">
+                <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed">
+                  互いに住み良い環境をつくるため、お隣同士の部屋の配置、窓の向き合いを調整することが必要です。隣地建物に面している窓やドアは、マスタープラン（全体計画）で指定されている側をカスミガラスなどの不可視なものにします。
+                </p>
+              </div>
             </motion.div>
           </div>
 
@@ -134,9 +138,11 @@ export function Landscape() {
                   className="w-full h-auto"
                 />
               </div>
-              <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
-                マスタープラン（全体計画）に示す植栽は、大切な景観ポイントです。シンボルツリー等、その他の中木と低木や地被植物を適切に配置し、それらを組み合わせることで美しいまちなみとして周辺環境へと繋がっていきます。
-              </p>
+              <div className="bg-gray-100 rounded p-4">
+                <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+                  マスタープラン（全体計画）に示す植栽は、大切な景観ポイントです。シンボルツリー等、その他の中木と低木や地被植物を適切に配置し、それらを組み合わせることで美しいまちなみとして周辺環境へと繋がっていきます。
+                </p>
+              </div>
             </motion.div>
 
             {/* Right - Lighting */}
@@ -153,9 +159,11 @@ export function Landscape() {
                   className="w-full h-auto"
                 />
               </div>
-              <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed">
-                通り沿いに連続する灯りで夜の美しいまちなみを演出し、防犯性も高めます。このために、全ての区画に門灯・植栽灯を各1灯以上設けます。（屋外照明計2灯以上）
-              </p>
+              <div className="bg-gray-100 rounded p-4">
+                <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed">
+                  通り沿いに連続する灯りで夜の美しいまちなみを演出し、防犯性も高めます。このために、全ての区画に門灯・植栽灯を各1灯以上設けます。（屋外照明計2灯以上）
+                </p>
+              </div>
             </motion.div>
           </div>
         </div>
