@@ -29,7 +29,7 @@ export function SurroundingEnvironment() {
 
   return (
     <>
-      <SectionWrapper id="surrounding-environment">
+      <SectionWrapper id="surrounding-environment" className="pt-0 md:pt-0">
         <div
           className="relative py-10 md:py-16"
           style={{ backgroundImage: "url(/images/location-bg-texture.png)", backgroundSize: "cover", backgroundPosition: "center" }}
