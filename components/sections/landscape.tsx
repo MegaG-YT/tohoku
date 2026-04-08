@@ -43,10 +43,10 @@ export function Landscape() {
             </h2>
 
             {/* Description */}
-            <p className="text-sm md:text-base text-[var(--brand-text-muted)] leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+            <p className="text-sm md:text-base text-[#3a3a3a] leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
               スマートハイムシティ泉では、建物だけでなく街並み全体をデザイン。
             </p>
-            <p className="text-sm md:text-base text-[var(--brand-text-muted)] leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+            <p className="text-sm md:text-base text-[#3a3a3a] leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
               統一された外構計画により美しい街並みと快適な暮らしを実現します。
             </p>
           </motion.div>
@@ -139,7 +139,7 @@ export function Landscape() {
                 />
               </div>
               <div className="bg-gray-100 rounded p-4 flex-1 min-h-[7rem]">
-                <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+                <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed">
                   マスタープラン（全体計画）に示す植栽は、大切な景観ポイントです。シンボルツリー等、その他の中木と低木や地被植物を適切に配置し、それらを組み合わせることで美しいまちなみとして周辺環境へと繋がっていきます。
                 </p>
               </div>
