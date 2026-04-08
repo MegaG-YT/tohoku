@@ -31,7 +31,7 @@ export function SurroundingEnvironment() {
     <>
       <SectionWrapper id="surrounding-environment">
         <div
-          className="relative py-16 md:py-24"
+          className="relative py-10 md:py-16"
           style={{ backgroundImage: "url(/images/location-bg-texture.png)", backgroundSize: "cover", backgroundPosition: "center" }}
         >
           <div className="mx-auto max-w-7xl px-4" ref={ref}>

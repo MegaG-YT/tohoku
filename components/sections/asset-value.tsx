@@ -11,7 +11,7 @@ export function AssetValue() {
   const prefersReducedMotion = useReducedMotion()
 
   return (
-    <div className="mt-16">
+    <div className="mt-8">
       <SectionWrapper id="asset-value">
         <div className="mx-auto max-w-7xl px-4" ref={ref}>
           {/* Heading block */}

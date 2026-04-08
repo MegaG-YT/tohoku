@@ -125,12 +125,13 @@ export function Landscape() {
               <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mb-6 text-center">
                 豊かな緑で彩られるまち
               </h3>
-              <div className="relative w-full aspect-[4/3] mb-6">
+              <div className="mb-6">
                 <Image
                   src="/images/landscape-greenery.png"
                   alt="豊かな緑に囲まれた街並みを歩く家族"
-                  fill
-                  className="object-cover"
+                  width={1848}
+                  height={933}
+                  className="w-full h-auto"
                 />
               </div>
               <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed">
@@ -143,12 +144,13 @@ export function Landscape() {
               <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mb-6 text-center">
                 外灯でまちを美しくライトアップ
               </h3>
-              <div className="relative w-full aspect-[4/3] mb-6">
+              <div className="mb-6">
                 <Image
                   src="/images/landscape-lighting.png"
                   alt="外灯で美しくライトアップされた夜の街並みイラスト"
-                  fill
-                  className="object-cover"
+                  width={1848}
+                  height={933}
+                  className="w-full h-auto"
                 />
               </div>
               <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed">

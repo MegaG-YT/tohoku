@@ -8,7 +8,7 @@ interface SectionWrapperProps {
 
 export function SectionWrapper({ id, children, className }: SectionWrapperProps) {
   return (
-    <section id={id} className={cn("scroll-mt-32 py-16 md:py-24", className)}>
+    <section id={id} className={cn("scroll-mt-32 py-10 md:py-16", className)}>
       {children}
     </section>
   )
