@@ -72,7 +72,7 @@ export function LotInformation() {
                 >
                   総区画数{" "}
                   <span className="text-3xl font-bold text-[var(--brand-text)] md:text-5xl">
-                    15
+                    17
                   </span>
                   区画
                 </p>
@@ -119,7 +119,7 @@ export function LotInformation() {
                 <div className="relative mx-auto w-full max-w-2xl overflow-hidden">
                   {/* 区画図 badge */}
                   <motion.div
-                    className="absolute left-4 top-4 z-30 rounded-md bg-[#555555] px-4 py-1.5"
+                    className="absolute left-0 top-0 z-30 rounded-md bg-[#555555] px-4 py-1.5"
                     {...(prefersReducedMotion
                       ? {}
                       : {

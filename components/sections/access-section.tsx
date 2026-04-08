@@ -94,7 +94,7 @@ export function AccessSection() {
           {/* Header */}
           <motion.div {...animate(0)} className="text-center mb-12 md:mb-16">
             <p
-              className="text-sm md:text-base text-white/90 mb-1"
+              className="text-sm md:text-base text-white mb-1"
               style={{
                 fontFamily:
                   '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif',
@@ -103,7 +103,7 @@ export function AccessSection() {
               鉄道駅が徒歩圏
             </p>
             <p
-              className="text-base md:text-lg text-white/80 mb-4"
+              className="text-base md:text-lg text-white mb-4"
               style={{
                 fontFamily:
                   '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif',
@@ -120,7 +120,7 @@ export function AccessSection() {
             >
               ACCESS
             </h2>
-            <p className="text-sm md:text-base text-white/80 max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+            <p className="text-sm md:text-base text-white max-w-2xl mx-auto leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
               JR福島駅周辺へ車で約10分～15分程度。地域内を通る道路網が整備されており、移動の利便性が高いエリアです。住宅地としての需要が高く、利便性と自然のバランスが良いエリアを求める方に適した場所です。
             </p>
           </motion.div>
@@ -186,11 +186,12 @@ export function AccessSection() {
               <p
                 key={index}
                 className="text-[10px] md:text-xs text-white"
+                style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
               >
                 {note}
               </p>
             ))}
-            <p className="text-[10px] md:text-xs text-white mt-4 text-right">
+            <p className="text-[10px] md:text-xs text-white mt-4 text-right" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
               Image photo（福島県福島市のJR「福島」駅から東側の夜景）
             </p>
           </motion.div>
