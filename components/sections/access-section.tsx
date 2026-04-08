@@ -126,7 +126,7 @@ export function AccessSection() {
           </motion.div>
 
           {/* Transport rows */}
-          <div className="space-y-6 md:space-y-8 mb-10 md:mb-14">
+          <div className="space-y-6 md:space-y-8 mb-10 md:mb-14 max-w-2xl mx-auto">
             {TRANSPORT_ROWS.map((row, rowIndex) => (
               <motion.div
                 key={rowIndex}
