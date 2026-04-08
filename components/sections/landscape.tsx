@@ -43,10 +43,10 @@ export function Landscape() {
             </h2>
 
             {/* Description */}
-            <p className="text-sm md:text-base text-[var(--brand-text-muted)] leading-relaxed">
+            <p className="text-sm md:text-base text-[var(--brand-text-muted)] leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
               スマートハイムシティ泉では、建物だけでなく街並み全体をデザイン。
             </p>
-            <p className="text-sm md:text-base text-[var(--brand-text-muted)] leading-relaxed">
+            <p className="text-sm md:text-base text-[var(--brand-text-muted)] leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
               統一された外構計画により美しい街並みと快適な暮らしを実現します。
             </p>
           </motion.div>
