@@ -125,7 +125,7 @@ export function LotInformation() {
                   width={2882}
                   height={4005}
                   className="absolute object-contain"
-                  style={{ top: "0%", left: "6.5%", width: "97.7%", height: "97.7%" }}
+                  style={{ top: "0.4%", left: "6.5%", width: "97.7%", height: "97.7%" }}
                   sizes="(max-width: 768px) 100vw, 672px"
                   priority={false}
                 />
