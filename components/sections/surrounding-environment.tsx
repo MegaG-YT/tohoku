@@ -114,7 +114,7 @@ export function SurroundingEnvironment() {
             </motion.div>
 
             {/* Footnotes */}
-            <div className="mt-8 text-[10px] md:text-xs text-[var(--brand-text-muted)] space-y-1">
+            <div className="mt-8 text-[10px] md:text-xs text-[var(--brand-text-muted)] space-y-1 text-right">
               <p>※所要時間は徒歩80m／分で算出しています。</p>
               <p>※車による所要時間は、通常（平日正午頃）要する時間です。</p>
               <p>※掲載の写真は2025年11月に撮影されたものです。</p>
