@@ -45,24 +45,24 @@ export function AssetValue() {
                 ? { duration: 0 }
                 : { duration: 0.6, delay: 0.15, ease: "easeOut" }
             }
-            className="bg-white/50 rounded-2xl p-10 md:p-16"
+            className="bg-white/50 rounded-2xl px-7 py-10 md:p-16"
             style={{ boxShadow: '0 16px 48px rgba(0,0,0,0.14), 0 8px 24px rgba(0,0,0,0.09)' }}
           >
             {/* Subtitle */}
             <div className="text-center mb-8 md:mb-10">
-              <p className="text-xs md:text-sm text-[var(--brand-text-muted)]">
+              <p className="text-sm md:text-sm text-[var(--brand-text-muted)]">
                 2025年3月31日に改訂された
               </p>
-              <p className="text-xs md:text-sm text-[var(--brand-text-muted)]">
+              <p className="text-sm md:text-sm text-[var(--brand-text-muted)]">
                 「福島市立地適正化計画」における当計画地の位置付け
               </p>
             </div>
 
             {/* Body text */}
-            <p className="text-sm md:text-base leading-loose text-[var(--brand-text)]">
+            <p className="text-base md:text-base leading-[2.4] text-[var(--brand-text)]">
               全国の地方都市において、人口減少と高齢化社会は避けられない課題であり、都市計画の見直しが行われています。「コンパクト＋ネットワーク」という基本方針のもと、福島市では2025年3月に「立地適正化計画」の改訂が行われました。その中で、本計画地である福島市泉字堀之内前周辺は、「居住誘導区域」に該当しており、今後、行政の方針のもと&ldquo;将来的に人を集めるエリア&rdquo;として資産価値の維持もしくは向上の可能性が考えられる物件であるといえます。
             </p>
-            <p className="text-xs md:text-sm text-[var(--brand-text-muted)] mt-4 text-center">
+            <p className="text-sm md:text-sm text-[var(--brand-text-muted)] mt-4 text-center">
               （引用：福島市WEBサイト「福島市立地適正化計画」）
             </p>
           </motion.div>
