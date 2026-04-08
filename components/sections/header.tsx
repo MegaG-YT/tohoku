@@ -39,6 +39,7 @@ export function Header() {
         <a
           href="#"
           className="hidden md:inline-flex items-center gap-2 border border-[var(--brand-primary)] text-[var(--brand-primary)] px-4 py-2 rounded text-sm hover:bg-[var(--brand-primary)] hover:text-white transition-colors"
+          style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
         >
           セキスイハイム東北サイトはこちら
           <ExternalLink className="h-4 w-4" />
@@ -71,6 +72,7 @@ export function Header() {
               <a
                 href="#"
                 className="mx-4 mt-6 inline-flex items-center justify-center gap-2 border border-[var(--brand-primary)] text-[var(--brand-primary)] px-4 py-3 rounded text-sm"
+                style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
                 onClick={() => setOpen(false)}
               >
                 セキスイハイム東北サイトはこちら
