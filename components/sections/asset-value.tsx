@@ -10,19 +10,18 @@ export function AssetValue() {
   const prefersReducedMotion = useReducedMotion()
 
   return (
-    <section id="asset-value" className="relative scroll-mt-32 overflow-hidden" ref={ref}>
-      {/* Aerial photo as full background */}
+    <section id="asset-value" className="relative scroll-mt-32" ref={ref}>
+      {/* Full-size aerial photo — not cropped */}
       <Image
         src="/images/asset-value-map.png"
         alt="福島市泉エリアの航空写真と立地適正化計画の区域図"
-        fill
-        className="object-cover"
-        sizes="100vw"
-        priority={false}
+        width={3840}
+        height={3597}
+        className="w-full h-auto"
       />
 
-      {/* Content overlaid on the aerial photo */}
-      <div className="relative z-10 py-16 md:py-24">
+      {/* Text content positioned at the top of the image */}
+      <div className="absolute inset-x-0 top-0 z-10 pt-12 md:pt-20 lg:pt-24">
         <div className="mx-auto max-w-7xl px-4">
           {/* Heading block */}
           <motion.div
@@ -33,7 +32,7 @@ export function AssetValue() {
                 ? { duration: 0 }
                 : { duration: 0.6, ease: "easeOut" }
             }
-            className="text-center mb-12 md:mb-16"
+            className="text-center mb-8 md:mb-12"
           >
             <p className="md:text-lg text-white/80 leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif', fontSize: '1.1rem' }}>
               &ldquo;泉&rdquo;は、将来的に人が集まる場所へ
