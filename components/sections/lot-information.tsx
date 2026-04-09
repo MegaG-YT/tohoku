@@ -31,7 +31,7 @@ export function LotInformation() {
     <SectionWrapper id="lot-information" className="py-0 md:py-0">
       <div ref={ref} className="relative py-16 md:py-24">
         <Image
-          src="/images/lot-bg-texture.webp"
+          src="/images/lot-bg-texture.png"
           alt=""
           fill
           className="object-cover"
