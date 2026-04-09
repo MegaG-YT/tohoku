@@ -70,7 +70,7 @@ export function SurroundingEnvironment() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6, delay: 0.15, ease: "easeOut" }}
-              className="flex flex-col md:flex-row gap-4 mb-2 md:mb-12 -mx-4 md:mx-0 mt-4 md:mt-0 pb-4 md:pb-0"
+              className="flex flex-col md:flex-row gap-4 mb-2 md:mb-12 mt-4 md:mt-0 pb-4 md:pb-0"
             >
               {/* Map */}
               <div className="w-full md:relative md:w-3/4 md:aspect-[4/3]">
