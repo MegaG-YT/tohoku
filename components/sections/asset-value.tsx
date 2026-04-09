@@ -10,14 +10,15 @@ export function AssetValue() {
   const prefersReducedMotion = useReducedMotion()
 
   return (
-    <section id="asset-value" className="relative scroll-mt-32" ref={ref}>
-      {/* Full-size aerial photo — not cropped */}
+    <section id="asset-value" className="relative scroll-mt-32 overflow-hidden" ref={ref}>
+      {/* Full-size aerial photo — zoomed 5% extra, clipping sides and bottom */}
       <Image
         src="/images/asset-value-map.png"
         alt="福島市泉エリアの航空写真と立地適正化計画の区域図"
         width={3840}
         height={3597}
-        className="w-full h-auto"
+        className="w-[110%] h-auto -ml-[5%]"
+        style={{ transformOrigin: 'top center' }}
       />
 
       {/* Text content positioned at the top of the image */}
