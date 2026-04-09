@@ -3,7 +3,6 @@
 import { useRef } from "react"
 import { motion, useInView, useReducedMotion } from "framer-motion"
 import Image from "next/image"
-import { SectionWrapper } from "@/components/shared/section-wrapper"
 
 export function AssetValue() {
   const ref = useRef<HTMLDivElement>(null)
@@ -11,9 +10,20 @@ export function AssetValue() {
   const prefersReducedMotion = useReducedMotion()
 
   return (
-    <div className="mt-8">
-      <SectionWrapper id="asset-value" className="pb-0 md:pb-0">
-        <div className="mx-auto max-w-7xl px-4" ref={ref}>
+    <section id="asset-value" className="relative scroll-mt-32 overflow-hidden" ref={ref}>
+      {/* Aerial photo as full background */}
+      <Image
+        src="/images/asset-value-map.png"
+        alt="福島市泉エリアの航空写真と立地適正化計画の区域図"
+        fill
+        className="object-cover"
+        sizes="100vw"
+        priority={false}
+      />
+
+      {/* Content overlaid on the aerial photo */}
+      <div className="relative z-10 py-16 md:py-24">
+        <div className="mx-auto max-w-7xl px-4">
           {/* Heading block */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -25,13 +35,13 @@ export function AssetValue() {
             }
             className="text-center mb-12 md:mb-16"
           >
-            <p className="md:text-lg text-[#707070] leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif', fontSize: '1.1rem' }}>
+            <p className="md:text-lg text-white/80 leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif', fontSize: '1.1rem' }}>
               &ldquo;泉&rdquo;は、将来的に人が集まる場所へ
             </p>
-            <p className="md:text-lg text-[#707070] leading-relaxed mb-6" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif', fontSize: '1.1rem' }}>
+            <p className="md:text-lg text-white/80 leading-relaxed mb-6" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif', fontSize: '1.1rem' }}>
               資産価値としての可能性
             </p>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl tracking-[0.08em] text-[#8AA0B8]" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl tracking-[0.08em] text-white" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
               ASSET VALUE
             </h2>
           </motion.div>
@@ -45,7 +55,7 @@ export function AssetValue() {
                 ? { duration: 0 }
                 : { duration: 0.6, delay: 0.15, ease: "easeOut" }
             }
-            className="w-full mx-auto bg-white/50 rounded-2xl px-4 py-10 md:w-[66%] md:p-16"
+            className="w-full mx-auto bg-white/60 backdrop-blur-sm rounded-2xl px-4 py-10 md:w-[66%] md:p-16"
             style={{ boxShadow: '0 16px 48px rgba(0,0,0,0.14), 0 8px 24px rgba(0,0,0,0.09)' }}
           >
             {/* Subtitle */}
@@ -66,29 +76,8 @@ export function AssetValue() {
               （引用：福島市WEBサイト「福島市立地適正化計画」）
             </p>
           </motion.div>
-
         </div>
-
-        {/* Aerial map image — full width */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={
-            prefersReducedMotion
-              ? { duration: 0 }
-              : { duration: 0.6, delay: 0.3, ease: "easeOut" }
-          }
-          className="mt-10 md:mt-14 relative w-full overflow-hidden"
-        >
-          <Image
-            src="/images/asset-value-map.png"
-            alt="福島市泉エリアの航空写真と立地適正化計画の区域図"
-            width={3840}
-            height={3192}
-            className="w-full h-auto"
-          />
-        </motion.div>
-      </SectionWrapper>
-    </div>
+      </div>
+    </section>
   )
 }
