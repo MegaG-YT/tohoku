@@ -71,7 +71,7 @@ export function Header() {
               ))}
               <a
                 href="#"
-                className="mx-4 mt-6 inline-flex items-center justify-center gap-2 border border-[var(--brand-primary)] text-[var(--brand-primary)] px-4 py-3 rounded text-sm"
+                className="mx-4 mt-6 inline-flex items-center justify-center gap-2 bg-[var(--brand-primary)] text-white px-4 py-3 rounded text-sm"
                 style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
                 onClick={() => setOpen(false)}
               >
