@@ -6,6 +6,11 @@ import Image from "next/image"
 
 const SERIF_FONT = '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif'
 
+const SALE_LOTS = [
+  { no: "No.2", area: "168.12㎡", pricePerTsubo: "坪単価", price: "販売価格" },
+  { no: "No.3", area: "174.66㎡", pricePerTsubo: "坪単価", price: "販売価格" },
+]
+
 export function LotInformation() {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, margin: "-100px 0px" })
@@ -34,75 +39,87 @@ export function LotInformation() {
         style={{ backgroundImage: "url(/images/lot-bg-texture.png)", backgroundSize: "cover", backgroundPosition: "center", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)" }}
       >
         <div className="relative z-10 mx-auto max-w-5xl px-4">
-          <motion.div
-            className="rounded-xl bg-white p-6 shadow-lg md:p-12"
-            {...animate(0)}
-          >
-            {/* Header */}
-            <div className="mb-10 text-center">
-              <motion.p
-                className="text-sm tracking-[0.2em] text-[#6B4C3B]"
-                style={{ fontFamily: SERIF_FONT }}
-                {...animate(0.1)}
-              >
-                全体区画図
-              </motion.p>
-              <motion.div
-                className="mx-auto mt-2 w-fit border-2 border-[var(--brand-primary)] px-8 py-2"
-                {...animate(0.15)}
-              >
-                <p
-                  className="text-lg tracking-[0.1em] text-[var(--brand-text-muted)] md:text-2xl"
-                  style={{ fontFamily: SERIF_FONT }}
-                >
-                  Real estate plot plan
-                </p>
-              </motion.div>
-
-              <motion.div {...animate(0.2)}>
-                <div className="mx-auto my-6 h-[1px] w-full max-w-md bg-[#C8A84E]" />
-                <p
-                  className="text-[var(--brand-text-muted)]"
-                  style={{ fontFamily: SERIF_FONT }}
-                >
-                  総区画数{" "}
-                  <span className="text-3xl font-bold text-[var(--brand-text)] md:text-5xl">
-                    17
-                  </span>
-                  区画
-                </p>
-                <div className="mx-auto my-6 h-[1px] w-full max-w-md bg-[#C8A84E]" />
-                <p
-                  className="text-sm text-[var(--brand-text-muted)]"
-                  style={{ fontFamily: SERIF_FONT }}
-                >
-                  予定販売価格帯／
-                  <span className="text-xl font-bold text-[var(--brand-text)] md:text-2xl">
-                    1,200
-                  </span>
-                  万円台~
-                  <span className="text-xl font-bold text-[var(--brand-text)] md:text-2xl">
-                    1,500
-                  </span>
-                  万円台
-                </p>
-              </motion.div>
-            </div>
-
-            {/* Plot Map */}
-            <motion.div
-              className="mx-auto w-full max-w-2xl"
-              {...animate(0.3)}
+          {/* Title */}
+          <motion.div className="text-center mb-10 md:mb-14" {...animate(0)}>
+            <h2
+              className="text-2xl md:text-4xl tracking-[0.1em] text-white/90"
+              style={{ fontFamily: SERIF_FONT }}
             >
-              <Image
-                src="/images/lot-plan-combined.png"
-                alt="全体区画図 - 17区画の配置図。各区画の面積と番号を表示"
-                width={1200}
-                height={1800}
-                className="h-auto w-full"
-                sizes="(max-width: 768px) 100vw, 672px"
-              />
-            </motion.div>
+              全体区画図／販売区画図
+            </h2>
+            <p
+              className="mt-2 text-base md:text-xl tracking-[0.05em] text-white/70"
+              style={{ fontFamily: SERIF_FONT }}
+            >
+              Real estate plot plan
+            </p>
+          </motion.div>
+
+          {/* Sales summary banner */}
+          <motion.div className="mb-8" {...animate(0.1)}>
+            <div className="mx-auto max-w-2xl bg-[#555555]/80 py-2 px-4 text-center">
+              <p className="text-sm md:text-base text-white tracking-widest" style={{ fontFamily: SERIF_FONT }}>
+                全<span className="text-lg md:text-xl font-bold">17</span>区画 / <span className="text-lg md:text-xl font-bold">2</span>区画販売中
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Sales table */}
+          <motion.div className="mx-auto max-w-2xl mb-10 md:mb-14" {...animate(0.15)}>
+            <table className="w-full text-xs md:text-sm border-collapse" style={{ fontFamily: SERIF_FONT }}>
+              <thead>
+                <tr className="bg-[#555555]/80 text-white">
+                  <th className="py-2 px-3 md:px-6 font-normal tracking-wider border border-white/20">区画No.</th>
+                  <th className="py-2 px-3 md:px-6 font-normal tracking-wider border border-white/20">区画面積</th>
+                  <th className="py-2 px-3 md:px-6 font-normal tracking-wider border border-white/20">坪単価</th>
+                  <th className="py-2 px-3 md:px-6 font-normal tracking-wider border border-white/20">販売価格</th>
+                </tr>
+              </thead>
+              <tbody>
+                {SALE_LOTS.map((lot) => (
+                  <tr key={lot.no} className="bg-white/80 text-[var(--brand-text)]">
+                    <td className="py-2 px-3 md:px-6 text-center border border-gray-300">{lot.no}</td>
+                    <td className="py-2 px-3 md:px-6 text-center border border-gray-300">{lot.area}</td>
+                    <td className="py-2 px-3 md:px-6 text-center border border-gray-300">{lot.pricePerTsubo}</td>
+                    <td className="py-2 px-3 md:px-6 text-center border border-gray-300">{lot.price}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </motion.div>
+
+          {/* 区画図 badge */}
+          <motion.div className="text-center mb-6" {...animate(0.2)}>
+            <span className="inline-block bg-[#555555]/80 text-white text-sm md:text-base tracking-widest px-6 py-1.5" style={{ fontFamily: SERIF_FONT }}>
+              区画図
+            </span>
+          </motion.div>
+
+          {/* Legend */}
+          <motion.div className="mx-auto max-w-2xl mb-6 space-y-2" {...animate(0.25)}>
+            <div className="flex items-center gap-3">
+              <span className="inline-block w-8 h-5 bg-[#D4DFC4] border border-gray-400" />
+              <span className="text-xs md:text-sm text-white/90" style={{ fontFamily: SERIF_FONT }}>：建築条件付土地（予告）</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="inline-block w-8 h-5 bg-[#3D5A2E] border border-gray-400" />
+              <span className="text-xs md:text-sm text-white/90" style={{ fontFamily: SERIF_FONT }}>：建築条件付土地（販売中）</span>
+            </div>
+          </motion.div>
+
+          {/* Plot Map */}
+          <motion.div
+            className="mx-auto w-full max-w-2xl"
+            {...animate(0.3)}
+          >
+            <Image
+              src="/images/lot-plan-combined.png"
+              alt="全体区画図 - 17区画の配置図。各区画の面積と番号を表示"
+              width={1200}
+              height={1800}
+              className="h-auto w-full"
+              sizes="(max-width: 768px) 100vw, 672px"
+            />
           </motion.div>
         </div>
       </div>
