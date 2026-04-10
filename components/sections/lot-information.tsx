@@ -32,12 +32,15 @@ export function LotInformation() {
   }
 
   return (
-    <section
-      id="lot-information"
-      className="scroll-mt-32 relative py-16 md:py-24 w-full"
-      style={{ backgroundImage: "url(/images/lot-bg-texture.png)", backgroundSize: "100% 100%", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}
-    >
-      <div ref={ref}>
+    <section id="lot-information" className="scroll-mt-32">
+      <div ref={ref} className="relative py-16 md:py-24">
+        <Image
+          src="/images/lot-bg-texture.png"
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
         <div className="relative z-10 mx-auto max-w-5xl px-4">
           {/* Title */}
           <motion.div className="text-center mb-10 md:mb-14" {...animate(0)}>
