@@ -32,12 +32,12 @@ export function LotInformation() {
   }
 
   return (
-    <section id="lot-information" className="scroll-mt-32">
-      <div
-        ref={ref}
-        className="relative w-screen py-16 md:py-24"
-        style={{ backgroundImage: "url(/images/lot-bg-texture.png)", backgroundSize: "cover", backgroundPosition: "center", marginLeft: "calc(-50vw + 50%)", marginRight: "calc(-50vw + 50%)" }}
-      >
+    <section
+      id="lot-information"
+      className="scroll-mt-32 relative py-16 md:py-24"
+      style={{ backgroundImage: "url(/images/lot-bg-texture.png)", backgroundSize: "cover", backgroundPosition: "center" }}
+    >
+      <div ref={ref}>
         <div className="relative z-10 mx-auto max-w-5xl px-4">
           {/* Title */}
           <motion.div className="text-center mb-10 md:mb-14" {...animate(0)}>
@@ -107,9 +107,9 @@ export function LotInformation() {
             </div>
           </motion.div>
 
-          {/* Plot Map */}
+          {/* Plot Map with light background */}
           <motion.div
-            className="mx-auto w-full max-w-2xl"
+            className="mx-auto w-full max-w-2xl bg-white/20 backdrop-blur-sm p-4 md:p-6"
             {...animate(0.3)}
           >
             <Image
