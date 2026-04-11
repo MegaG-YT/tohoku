@@ -109,7 +109,7 @@ export function Landscape() {
                 プライバシーに配慮して部屋や窓を設計
               </h3>
               <div className="relative w-full aspect-[4/3] mb-6 flex items-center justify-center">
-                <div className="relative w-[85%] h-full">
+                <div className="relative w-3/4 h-full">
                   <Image
                     src="/images/landscape-privacy.png"
                     alt="プライバシー配慮の設計図 - 隣地境界線より2.5m未満の開口部は不可視なものに"
