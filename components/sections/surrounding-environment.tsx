@@ -94,12 +94,12 @@ export function SurroundingEnvironment() {
               </div>
               {/* Sidebar facilities */}
               <div className="flex flex-row w-full md:flex-col gap-3 md:gap-4 md:w-1/4 px-4 md:px-0">
-                {SIDEBAR_FACILITIES.map((facility) => (
+                {SIDEBAR_FACILITIES.map((facility, i) => (
                   <div key={facility.name} className="flex-1 md:flex-none md:w-auto">
                     <div className="relative w-full h-[60px] md:h-auto md:aspect-[4/3] overflow-hidden">
                       <Image src={facility.src} alt={facility.name} fill className="object-cover" style={{ objectPosition: facility.objectPosition }} />
                     </div>
-                    <div className="relative z-20 w-full h-2 -top-4 -mb-4" style={{ backgroundColor: CATEGORY_HEX[facility.category] }} />
+                    <div className={`relative z-20 w-full h-2${i === 0 ? " -top-4 -mb-4" : ""}`} style={{ backgroundColor: CATEGORY_HEX[facility.category] }} />
                     <p className="text-[10px] md:text-sm text-[var(--brand-text)] mt-1 font-bold">{facility.name}</p>
                     <p className="text-[10px] md:text-xs text-[var(--brand-text-muted)]">{facility.distance}</p>
                   </div>
