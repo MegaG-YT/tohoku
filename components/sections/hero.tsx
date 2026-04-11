@@ -129,25 +129,9 @@ export function Hero() {
       </p>
 
       {/* Sales banner */}
-      <div className="mt-4 bg-[#635B51] py-4 md:py-5 px-4 md:px-8 overflow-hidden">
-        <div className="mx-auto max-w-6xl flex flex-wrap md:flex-nowrap items-center justify-center gap-4 md:gap-6 text-white md:whitespace-nowrap tracking-widest md:tracking-normal" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
-          {/* Row 1 on mobile: 新発売 + 建築条件付 + 全17区画 */}
-          <span className="text-2xl md:text-4xl lg:text-5xl font-bold tracking-wider">新発売</span>
-          <span className="border-l border-white/40 h-8 md:h-12" />
-          <span className="flex items-stretch gap-2">
-            <span className="flex flex-col justify-center gap-1 text-xs md:text-sm lg:text-base text-center leading-none">
-              <span>建　築</span>
-              <span>条件付</span>
-            </span>
-            <span className="text-2xl md:text-4xl lg:text-5xl font-bold">全17区画</span>
-          </span>
-          {/* Row 2 on mobile: price full width centered */}
-          <span className="w-full md:w-auto flex items-center justify-center gap-0 border-t border-white/20 pt-3 md:border-t-0 md:pt-0 md:contents">
-            <span className="hidden md:inline border-l border-white/40 h-12" />
-            <span className="text-2xl md:text-4xl lg:text-5xl font-bold">
-              1,200<span className="text-sm md:text-xl font-normal">万円台</span>〜1,500<span className="text-sm md:text-xl font-normal">万円台</span>
-            </span>
-          </span>
+      <div className="mt-4 bg-[#c8a84b] py-4 md:py-5 px-4 md:px-8 w-full">
+        <div className="flex items-center justify-center text-white" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+          <span className="text-xl md:text-4xl lg:text-5xl font-bold tracking-[0.05em]">第1期　建築条件付土地販売開始!</span>
         </div>
       </div>
     </section>
