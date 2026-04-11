@@ -36,7 +36,7 @@ export function Landscape() {
 
             {/* LANDSCAPE title */}
             <h2
-              className="text-4xl md:text-6xl lg:text-7xl tracking-[0.08em] text-[var(--brand-nav)] mb-10"
+              className="text-4xl md:text-6xl lg:text-7xl tracking-[0.02em] text-[var(--brand-nav)] mb-10"
               style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
             >
               LANDSCAPE
