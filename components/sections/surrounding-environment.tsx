@@ -118,6 +118,7 @@ export function SurroundingEnvironment() {
                 <div key={facility.name}>
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <Image src={facility.src} alt={facility.name} fill className="object-cover" />
+                    <span className={`absolute top-1 left-1 text-[8px] md:text-[10px] font-bold px-1.5 py-0.5 rounded ${CATEGORY_COLORS[facility.category]}`}>{facility.category}</span>
                   </div>
                   <p className="text-[10px] md:text-sm text-[var(--brand-text)] mt-1 font-bold">{facility.name}</p>
                   <p className="text-[9px] md:text-xs text-[var(--brand-text-muted)]">{facility.distance}</p>
