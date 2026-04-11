@@ -98,7 +98,6 @@ export function SurroundingEnvironment() {
                   <div key={facility.name} className="flex-1 md:flex-none md:w-auto">
                     <div className="relative w-full h-[60px] md:h-auto md:aspect-[4/3] overflow-hidden" style={{ borderBottom: `4px solid ${CATEGORY_HEX[facility.category]}` }}>
                       <Image src={facility.src} alt={facility.name} fill className="object-cover" style={{ objectPosition: facility.objectPosition }} />
-                      <span className="absolute top-1.5 left-1.5 w-2.5 h-2.5 rounded-full" style={{ backgroundColor: CATEGORY_HEX[facility.category] }} />
                     </div>
                     <p className="text-[10px] md:text-sm text-[var(--brand-text)] mt-1 font-bold">{facility.name}</p>
                     <p className="text-[10px] md:text-xs text-[var(--brand-text-muted)]">{facility.distance}</p>
