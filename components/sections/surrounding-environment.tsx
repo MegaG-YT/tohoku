@@ -12,7 +12,7 @@ const CATEGORY_HEX: Record<Category, string> = {
   "鉄道駅":             "#2d5f8a",
   "教育機関・学校":     "#5a7a5c",
   "病院・クリニック":   "#8b5a52",
-  "公共機関・金融機関": "#6b7a8d",
+  "公共機関・金融機関": "#78705a",
 }
 
 const SIDEBAR_FACILITIES: { src: string; name: string; distance: string; objectPosition: string; category: Category }[] = [
