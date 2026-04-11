@@ -54,7 +54,7 @@ export function AssetValue() {
                 ? { duration: 0 }
                 : { duration: 0.6, delay: 0.15, ease: "easeOut" }
             }
-            className="w-full mx-auto bg-white/60 backdrop-blur-sm rounded-2xl px-4 py-10 md:w-[66%] md:p-16"
+            className="w-full mx-auto bg-white/60 backdrop-blur-sm rounded-2xl px-4 py-10 md:w-[66%] md:p-16 max-w-[1320px]"
             style={{ boxShadow: '0 16px 48px rgba(0,0,0,0.14), 0 8px 24px rgba(0,0,0,0.09)' }}
           >
             {/* Subtitle */}
