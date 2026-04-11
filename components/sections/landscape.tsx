@@ -106,15 +106,17 @@ export function Landscape() {
               <h3 className="text-base md:text-lg font-bold text-[#4A4A4A] mt-6 mb-2 md:mt-0 md:mb-6 text-center" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                 プライバシーに配慮して部屋や窓を設計
               </h3>
-              <div className="relative w-2/3 mx-auto aspect-[4/3]">
-                <Image
-                  src="/images/landscape-privacy.png"
-                  alt="プライバシー配慮の設計図 - 隣地境界線より2.5m未満の開口部は不可視なものに"
-                  fill
-                  className="object-contain"
-                />
+              <div className="relative w-full aspect-[4/3] mb-6 flex items-center justify-center">
+                <div className="relative w-2/3 h-full">
+                  <Image
+                    src="/images/landscape-privacy.png"
+                    alt="プライバシー配慮の設計図 - 隣地境界線より2.5m未満の開口部は不可視なものに"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </div>
-              <div className="bg-gray-100 rounded p-4 mt-auto min-h-[7rem]">
+              <div className="bg-gray-100 rounded p-4 flex-1 min-h-[7rem]">
                 <p className="text-xs md:text-sm text-[var(--brand-text-muted)] leading-relaxed">
                   互いに住み良い環境をつくるため、お隣同士の部屋の配置、窓の向き合いを調整することが必要です。隣地建物に面している窓やドアは、マスタープラン（全体計画）で指定されている側をカスミガラスなどの不可視なものにします。
                 </p>
