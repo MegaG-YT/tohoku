@@ -94,12 +94,12 @@ export function SurroundingEnvironment() {
               </div>
               {/* Sidebar facilities */}
               <div className="flex flex-row w-full md:flex-col gap-3 md:gap-4 md:w-1/4 px-4 md:px-0">
-                {SIDEBAR_FACILITIES.map((facility, i) => (
+                {SIDEBAR_FACILITIES.map((facility) => (
                   <div key={facility.name} className="flex-1 md:flex-none md:w-auto">
-                    <div className="relative w-full h-[60px] md:h-auto md:aspect-[4/3] overflow-hidden">
-                      <Image src={facility.src} alt={facility.name} fill className="object-cover" style={{ objectPosition: facility.objectPosition }} />
+                    <div className="relative w-full h-[60px] md:h-auto md:aspect-[4/3]">
+                      <Image src={facility.src} alt={facility.name} fill className="object-cover overflow-hidden" style={{ objectPosition: facility.objectPosition }} />
+                      <div className="absolute bottom-0 left-0 right-0 h-2 z-20" style={{ backgroundColor: CATEGORY_HEX[facility.category] }} />
                     </div>
-                    <div className={`relative z-20 w-full h-2${i === 0 ? " -top-4 -mb-4" : ""}`} style={{ backgroundColor: CATEGORY_HEX[facility.category] }} />
                     <p className="text-[10px] md:text-sm text-[var(--brand-text)] mt-1 font-bold">{facility.name}</p>
                     <p className="text-[10px] md:text-xs text-[var(--brand-text-muted)]">{facility.distance}</p>
                   </div>
@@ -114,12 +114,12 @@ export function SurroundingEnvironment() {
               transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.6, delay: 0.3, ease: "easeOut" }}
               className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
             >
-              {GRID_FACILITIES.map((facility, i) => (
+              {GRID_FACILITIES.map((facility) => (
                 <div key={facility.name}>
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <Image src={facility.src} alt={facility.name} fill className="object-cover" />
+                  <div className="relative aspect-[4/3]">
+                    <Image src={facility.src} alt={facility.name} fill className="object-cover overflow-hidden" />
+                    <div className="absolute bottom-0 left-0 right-0 h-2 z-20" style={{ backgroundColor: CATEGORY_HEX[facility.category] }} />
                   </div>
-                  <div className={`relative z-20 w-full h-2${[1, 2, 3].includes(i) ? " -top-1 -mb-1" : ""}`} style={{ backgroundColor: CATEGORY_HEX[facility.category] }} />
                   <p className="text-[10px] md:text-sm text-[var(--brand-text)] mt-1 font-bold">{facility.name}</p>
                   <p className="text-[9px] md:text-xs text-[var(--brand-text-muted)]">{facility.distance}</p>
                 </div>
