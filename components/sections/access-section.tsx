@@ -116,7 +116,7 @@ export function AccessSection() {
               style={{
                 fontFamily:
                   '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif',
-                color: '#7a5550',
+                color: '#8b4840',
               }}
             >
               ACCESS
