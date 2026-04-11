@@ -49,7 +49,7 @@ export function SurroundingEnvironment() {
                 生活利便施設が500m圏内に。
               </p>
               <h2
-                className="text-4xl md:text-6xl lg:text-7xl tracking-[0.15em] text-[#b8a468] mb-8 md:mb-12"
+                className="text-4xl md:text-6xl lg:text-7xl tracking-[0.015em] text-[#b8a468] mb-8 md:mb-12"
                 style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
               >
                 LOCATION
