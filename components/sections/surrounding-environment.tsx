@@ -98,11 +98,9 @@ export function SurroundingEnvironment() {
                   <div key={facility.name} className="flex-1 md:flex-none md:w-auto">
                     <div className="relative w-full h-[60px] md:h-auto md:aspect-[4/3] overflow-hidden">
                       <Image src={facility.src} alt={facility.name} fill className="object-cover" style={{ objectPosition: facility.objectPosition }} />
+                      <div className="absolute inset-0" style={{ backgroundColor: CATEGORY_HEX[facility.category], opacity: 0.25 }} />
                     </div>
-                    <div className="flex items-center gap-1.5 mt-1">
-                      <span className="shrink-0 text-[8px] md:text-[9px] font-bold px-1.5 py-0.5 rounded-full text-white" style={{ backgroundColor: CATEGORY_HEX[facility.category] }}>{facility.category}</span>
-                      <p className="text-[10px] md:text-sm text-[var(--brand-text)] font-bold leading-tight">{facility.name}</p>
-                    </div>
+                    <p className="text-[10px] md:text-sm text-[var(--brand-text)] mt-1 font-bold">{facility.name}</p>
                     <p className="text-[10px] md:text-xs text-[var(--brand-text-muted)]">{facility.distance}</p>
                   </div>
                 ))}
@@ -120,11 +118,9 @@ export function SurroundingEnvironment() {
                 <div key={facility.name}>
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <Image src={facility.src} alt={facility.name} fill className="object-cover" />
+                    <div className="absolute inset-0" style={{ backgroundColor: CATEGORY_HEX[facility.category], opacity: 0.25 }} />
                   </div>
-                  <div className="flex items-center gap-1.5 mt-1">
-                    <span className="shrink-0 text-[8px] md:text-[9px] font-bold px-1.5 py-0.5 rounded-full text-white" style={{ backgroundColor: CATEGORY_HEX[facility.category] }}>{facility.category}</span>
-                    <p className="text-[10px] md:text-sm text-[var(--brand-text)] font-bold leading-tight">{facility.name}</p>
-                  </div>
+                  <p className="text-[10px] md:text-sm text-[var(--brand-text)] mt-1 font-bold">{facility.name}</p>
                   <p className="text-[9px] md:text-xs text-[var(--brand-text-muted)]">{facility.distance}</p>
                 </div>
               ))}
