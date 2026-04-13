@@ -69,13 +69,12 @@ export function AssetValue() {
 
       {/* ── Mobile: headings over image, card below ── */}
       <div className="md:hidden">
-        <div className="relative">
+        <div className="relative aspect-[4/3] overflow-hidden">
           <Image
             src="/images/asset-value-map.png"
             alt="福島市泉エリアの航空写真と立地適正化計画の区域図"
-            width={3840}
-            height={3597}
-            className="w-full h-auto"
+            fill
+            className="object-cover"
           />
           <div className="absolute inset-x-0 top-0 pt-10 px-4 text-center">
             {headingBlock}
