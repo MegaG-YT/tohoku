@@ -60,7 +60,7 @@ export function LotInformation() {
 
           {/* Sales summary banner */}
           <motion.div className="mb-8" {...animate(0.1)}>
-            <div className="mx-auto max-w-2xl bg-[#555555]/80 py-2 px-4 text-center">
+            <div className="mx-auto max-w-md bg-[#555555]/80 py-2 px-4 text-center">
               <p className="text-sm md:text-base text-white tracking-widest" style={{ fontFamily: SERIF_FONT }}>
                 全<span className="text-lg md:text-xl font-bold">17</span>区画 / <span className="text-lg md:text-xl font-bold">2</span>区画販売中
               </p>
