@@ -1,14 +1,93 @@
 "use client"
 
-import { useRef } from "react"
-import { motion, useInView, useReducedMotion } from "framer-motion"
+import { useEffect, useRef, useState } from "react"
+import { motion, useInView, useReducedMotion, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"
 import { SectionWrapper } from "@/components/shared/section-wrapper"
 
+type RevealState = "hidden" | "playingForward" | "visible" | "playingReverse"
+
+const STAGGER = 0.42
+const DELAY_CHILDREN = 0.2
+const LAYER_DURATION = 1.2
+const LAYER_COUNT = 9
+const TOTAL_REVEAL_MS =
+  (DELAY_CHILDREN + (LAYER_COUNT - 1) * STAGGER + LAYER_DURATION) * 1000
+
 export function Landscape() {
   const ref = useRef<HTMLDivElement>(null)
+  const headerRef = useRef<HTMLDivElement>(null)
+  const imageRef = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, margin: "-100px 0px 0px 0px" })
+  const headerInView = useInView(headerRef, { amount: 0.6 })
   const prefersReducedMotion = useReducedMotion()
+
+  const [revealState, setRevealState] = useState<RevealState>("hidden")
+
+  useEffect(() => {
+    if (prefersReducedMotion) return
+    if (headerInView && revealState === "hidden") {
+      setRevealState("playingForward")
+    }
+  }, [headerInView, revealState, prefersReducedMotion])
+
+  useEffect(() => {
+    if (prefersReducedMotion) return
+    if (revealState !== "visible") return
+    let lastY = window.scrollY
+    const handleScroll = () => {
+      const currentY = window.scrollY
+      const isScrollingUp = currentY < lastY
+      lastY = currentY
+      if (!isScrollingUp) return
+      const rect = imageRef.current?.getBoundingClientRect()
+      if (!rect) return
+      const imageInView = rect.bottom > 0 && rect.top < window.innerHeight
+      if (imageInView) setRevealState("playingReverse")
+    }
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [revealState, prefersReducedMotion])
+
+  useEffect(() => {
+    if (revealState === "playingForward") {
+      const t = setTimeout(() => setRevealState("visible"), TOTAL_REVEAL_MS)
+      return () => clearTimeout(t)
+    }
+    if (revealState === "playingReverse") {
+      const t = setTimeout(() => setRevealState("hidden"), TOTAL_REVEAL_MS)
+      return () => clearTimeout(t)
+    }
+  }, [revealState])
+
+  const targetVariant =
+    revealState === "playingForward" || revealState === "visible"
+      ? "visible"
+      : "hidden"
+
+  const stackVariants = {
+    hidden: {
+      transition: { staggerChildren: STAGGER, staggerDirection: -1 },
+    },
+    visible: {
+      transition: { staggerChildren: STAGGER, delayChildren: DELAY_CHILDREN },
+    },
+  }
+  const layerVariants = {
+    hidden: { opacity: 0, y: -32, filter: "blur(10px)" },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: { duration: LAYER_DURATION, ease: "easeOut" as const },
+    },
+  }
+
+  const { scrollYProgress: imageProgress } = useScroll({
+    target: imageRef,
+    offset: ["start end", "end start"],
+  })
+  const handY = useTransform(imageProgress, [0, 1], ["-18%", "12%"])
 
   const animate = (delay = 0) => ({
     initial: { opacity: 0, y: 30 },
@@ -22,7 +101,7 @@ export function Landscape() {
     <>
       <SectionWrapper id="landscape">
         <div className="mx-auto max-w-7xl px-4" ref={ref}>
-          <motion.div {...animate()} className="text-center">
+          <motion.div ref={headerRef} {...animate()} className="text-center">
             {/* Heading */}
             <p className="text-lg md:text-2xl text-[#1a1a1a] leading-relaxed" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
               街全体をデザインする、
@@ -51,16 +130,131 @@ export function Landscape() {
             </p>
           </motion.div>
 
-          {/* Main landscape illustration */}
-          <motion.div {...animate(0.2)} className="mt-12">
-            <div className="relative w-full aspect-[16/9]">
+          {/* Main landscape illustration — layered animated reveal */}
+          <motion.div
+            ref={imageRef}
+            className="relative w-full aspect-[16/9] mt-12 overflow-hidden"
+            variants={prefersReducedMotion ? undefined : stackVariants}
+            initial={prefersReducedMotion ? false : "hidden"}
+            animate={prefersReducedMotion ? undefined : targetVariant}
+          >
+            {/* Layer 1 — sky + birds */}
+            <motion.div
+              variants={prefersReducedMotion ? undefined : layerVariants}
+              className="absolute inset-0"
+            >
               <Image
-                src="/images/landscape-machinami.png"
-                alt="まちなみデザインガイドライン - 街並みの完成イメージイラスト"
+                src="/images/landscape-layer-01-sky.png"
+                alt=""
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 100vw, 960px"
               />
-            </div>
+            </motion.div>
+            {/* Layer 2 — houses / street line-art */}
+            <motion.div
+              variants={prefersReducedMotion ? undefined : layerVariants}
+              className="absolute inset-0"
+            >
+              <Image
+                src="/images/landscape-layer-02-houses.png"
+                alt=""
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 960px"
+              />
+            </motion.div>
+            {/* Layer 3 — trees / foliage */}
+            <motion.div
+              variants={prefersReducedMotion ? undefined : layerVariants}
+              className="absolute inset-0"
+            >
+              <Image
+                src="/images/landscape-layer-03-trees.png"
+                alt=""
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 960px"
+              />
+            </motion.div>
+            {/* Layer 4 — cyclist */}
+            <motion.div
+              variants={prefersReducedMotion ? undefined : layerVariants}
+              className="absolute inset-0"
+            >
+              <Image
+                src="/images/landscape-layer-04-cyclist.png"
+                alt=""
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 960px"
+              />
+            </motion.div>
+            {/* Layers 6-8 — people group */}
+            <motion.div
+              variants={prefersReducedMotion ? undefined : layerVariants}
+              className="absolute inset-0"
+            >
+              <Image
+                src="/images/landscape-layer-06-people-mother-child.png"
+                alt=""
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 960px"
+              />
+            </motion.div>
+            <motion.div
+              variants={prefersReducedMotion ? undefined : layerVariants}
+              className="absolute inset-0"
+            >
+              <Image
+                src="/images/landscape-layer-07-people-umbrella.png"
+                alt=""
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 960px"
+              />
+            </motion.div>
+            <motion.div
+              variants={prefersReducedMotion ? undefined : layerVariants}
+              className="absolute inset-0"
+            >
+              <Image
+                src="/images/landscape-layer-08-people-dogwalker.png"
+                alt=""
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 960px"
+              />
+            </motion.div>
+            {/* Layer 5 — Machinami Design Guideline title badge */}
+            <motion.div
+              variants={prefersReducedMotion ? undefined : layerVariants}
+              className="absolute inset-0"
+            >
+              <Image
+                src="/images/landscape-layer-05-title.png"
+                alt=""
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 960px"
+              />
+            </motion.div>
+            {/* Layer 9 — hand with pencil (variants reveal + scroll-linked Y) */}
+            <motion.div
+              variants={prefersReducedMotion ? undefined : layerVariants}
+              style={prefersReducedMotion ? undefined : { y: handY }}
+              className="absolute inset-0 will-change-transform"
+            >
+              <Image
+                src="/images/landscape-layer-09-hand-pencil.png"
+                alt=""
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 960px"
+              />
+            </motion.div>
+            <span className="sr-only">まちなみデザインガイドライン - 街並みの完成イメージイラスト</span>
           </motion.div>
 
           {/* Planting caption */}
