@@ -68,7 +68,7 @@ export function LotInformation() {
           </motion.div>
 
           {/* Sales table */}
-          <motion.div className="mx-auto max-w-2xl mb-10 md:mb-14" {...animate(0.15)}>
+          <motion.div className="mx-auto max-w-md mb-10 md:mb-14" {...animate(0.15)}>
             <table className="w-full text-xs md:text-sm border-collapse" style={{ fontFamily: SERIF_FONT }}>
               <thead>
                 <tr className="bg-[#555555]/80 text-white">
