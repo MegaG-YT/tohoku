@@ -4,7 +4,6 @@ import { useRef } from "react"
 import { motion, useInView, useReducedMotion, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"
 import { SectionWrapper } from "@/components/shared/section-wrapper"
-import { CtaButtons } from "@/components/shared/cta-buttons"
 
 const STAGGER = 0.42
 const DELAY_CHILDREN = 0.2
@@ -315,8 +314,6 @@ export function Landscape() {
               </div>
             </motion.div>
           </div>
-
-          <CtaButtons className="mt-12 md:mt-16" />
         </div>
       </SectionWrapper>
     </>

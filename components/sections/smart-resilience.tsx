@@ -4,6 +4,7 @@ import { useRef } from "react"
 import { motion, useInView, useReducedMotion } from "framer-motion"
 import Image from "next/image"
 import { SectionWrapper } from "@/components/shared/section-wrapper"
+import { CtaButtons } from "@/components/shared/cta-buttons"
 
 const CARDS = [
   {
@@ -158,6 +159,8 @@ export function SmartResilience() {
                 </motion.div>
               ))}
             </div>
+
+            <CtaButtons className="mt-12 md:mt-16" />
           </div>
         </motion.div>
       </SectionWrapper>
