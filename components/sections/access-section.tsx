@@ -20,7 +20,7 @@ interface TransportRow {
 
 const TRANSPORT_ROWS: TransportRow[] = [
   {
-    image: "/images/access-train.png",
+    image: "/images/access-train.jpg",
     imageAlt: "福島交通飯坂線の電車",
     items: [
       {
@@ -40,7 +40,7 @@ const TRANSPORT_ROWS: TransportRow[] = [
     ],
   },
   {
-    image: "/images/access-driving.png",
+    image: "/images/access-driving.jpg",
     imageAlt: "車のハンドルを握るドライバー",
     items: [
       {
