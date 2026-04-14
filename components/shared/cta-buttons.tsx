@@ -8,6 +8,11 @@ const serifFont = {
   fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif',
 }
 
+const RESERVATION_URL =
+  "https://www.heim-tohoku.co.jp/contact/fukushima_bunjyo_briefing.html"
+const BROCHURE_URL =
+  "https://www.heim-tohoku.co.jp/contact/sale_contact.html"
+
 type CtaButtonsProps = {
   className?: string
   reservationHref?: string
@@ -16,8 +21,8 @@ type CtaButtonsProps = {
 
 export function CtaButtons({
   className,
-  reservationHref = "#",
-  brochureHref = "#",
+  reservationHref = RESERVATION_URL,
+  brochureHref = BROCHURE_URL,
 }: CtaButtonsProps) {
   const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once: true, amount: 0.4 })
@@ -43,6 +48,8 @@ export function CtaButtons({
       <motion.a
         {...entrance(0)}
         href={reservationHref}
+        target="_blank"
+        rel="noopener noreferrer"
         aria-label="来場予約"
         whileHover={prefersReduced ? undefined : { scale: 1.02 }}
         whileTap={prefersReduced ? undefined : { scale: 0.98 }}
@@ -68,6 +75,8 @@ export function CtaButtons({
       <motion.a
         {...entrance(0.08)}
         href={brochureHref}
+        target="_blank"
+        rel="noopener noreferrer"
         aria-label="資料請求"
         whileHover={prefersReduced ? undefined : { scale: 1.02 }}
         whileTap={prefersReduced ? undefined : { scale: 0.98 }}
@@ -100,8 +109,8 @@ type MobileCtaBarProps = {
 }
 
 export function MobileCtaBar({
-  reservationHref = "#",
-  brochureHref = "#",
+  reservationHref = RESERVATION_URL,
+  brochureHref = BROCHURE_URL,
   threshold = 320,
 }: MobileCtaBarProps) {
   const prefersReduced = useReducedMotion()
@@ -135,6 +144,8 @@ export function MobileCtaBar({
           <div className="flex items-center gap-3 pointer-events-auto">
             <a
               href={reservationHref}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="来場予約"
               className={cn(
                 "flex-1 flex items-center justify-center h-12 rounded-full",
@@ -152,6 +163,8 @@ export function MobileCtaBar({
             </a>
             <a
               href={brochureHref}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="資料請求"
               className={cn(
                 "flex-1 flex items-center justify-center h-12 rounded-full",
