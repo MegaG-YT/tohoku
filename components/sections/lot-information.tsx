@@ -45,13 +45,13 @@ export function LotInformation() {
           {/* Title */}
           <motion.div className="text-center mb-10 md:mb-14" {...animate(0)}>
             <h2
-              className="text-2xl md:text-4xl tracking-[0.1em] text-white/90"
+              className="text-2xl md:text-4xl tracking-[0.1em] text-black"
               style={{ fontFamily: SERIF_FONT }}
             >
               全体区画図／販売区画図
             </h2>
             <p
-              className="mt-2 text-base md:text-xl tracking-[0.05em] text-white/70"
+              className="mt-2 text-base md:text-xl tracking-[0.05em] text-black"
               style={{ fontFamily: SERIF_FONT }}
             >
               Real estate plot plan
