@@ -64,7 +64,10 @@ for (const rel of files) {
     base === "404.html" ||
     parts[0] === "_not-found" ||
     base === ".gitkeep" ||
-    base === ".DS_Store"
+    base === ".DS_Store" ||
+    // create-next-app boilerplate SVGs in public/
+    (parts.length === 1 &&
+      ["file.svg", "globe.svg", "next.svg", "vercel.svg", "window.svg"].includes(base))
   ) {
     rename.set(rel, null);
     continue;
