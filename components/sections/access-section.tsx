@@ -20,7 +20,7 @@ interface TransportRow {
 
 const TRANSPORT_ROWS: TransportRow[] = [
   {
-    image: "/images/access-train.jpg",
+    image: "/images/access-train.webp",
     imageAlt: "福島交通飯坂線の電車",
     items: [
       {
@@ -40,7 +40,7 @@ const TRANSPORT_ROWS: TransportRow[] = [
     ],
   },
   {
-    image: "/images/access-driving.jpg",
+    image: "/images/access-driving.webp",
     imageAlt: "車のハンドルを握るドライバー",
     items: [
       {
@@ -80,7 +80,7 @@ export function AccessSection() {
       <div className="relative py-16 md:py-24" ref={ref}>
         {/* Background nightscape */}
         <Image
-          src="/images/hero-nightscape.png"
+          src="/images/hero-nightscape.webp"
           alt=""
           fill
           className="object-cover"

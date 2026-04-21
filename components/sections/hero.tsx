@@ -5,12 +5,12 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion"
 import Image from "next/image"
 
 const HERO_IMAGES = [
-  { src: "/images/hero-cityscape.png", alt: "福島市の街並みと山々の風景" },
-  { src: "/images/hero-family-play.png", alt: "肩車をして遊ぶ家族" },
-  { src: "/images/hero-family-walk.png", alt: "橋の近くを散歩する家族" },
-  { src: "/images/hero-cycling.png", alt: "青空の下でサイクリングを楽しむ人々" },
-  { src: "/images/hero-cooking.png", alt: "一緒に料理を楽しむ夫婦" },
-  { src: "/images/hero-nightscape.png", alt: "福島市の美しい夜景" },
+  { src: "/images/hero-cityscape.webp", alt: "福島市の街並みと山々の風景" },
+  { src: "/images/hero-family-play.webp", alt: "肩車をして遊ぶ家族" },
+  { src: "/images/hero-family-walk.webp", alt: "橋の近くを散歩する家族" },
+  { src: "/images/hero-cycling.webp", alt: "青空の下でサイクリングを楽しむ人々" },
+  { src: "/images/hero-cooking.webp", alt: "一緒に料理を楽しむ夫婦" },
+  { src: "/images/hero-nightscape.webp", alt: "福島市の美しい夜景" },
 ]
 
 // Desktop: static cells, no cycling

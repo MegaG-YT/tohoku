@@ -94,7 +94,7 @@ export function Landscape() {
               className="absolute inset-0"
             >
               <Image
-                src="/images/landscape-layer-01-sky.png"
+                src="/images/landscape-layer-01-sky.webp"
                 alt=""
                 fill
                 className="object-cover"
@@ -107,7 +107,7 @@ export function Landscape() {
               className="absolute inset-0"
             >
               <Image
-                src="/images/landscape-layer-02-houses.png"
+                src="/images/landscape-layer-02-houses.webp"
                 alt=""
                 fill
                 className="object-cover"
@@ -120,7 +120,7 @@ export function Landscape() {
               className="absolute inset-0"
             >
               <Image
-                src="/images/landscape-layer-03-trees.png"
+                src="/images/landscape-layer-03-trees.webp"
                 alt=""
                 fill
                 className="object-cover"
@@ -133,7 +133,7 @@ export function Landscape() {
               className="absolute inset-0"
             >
               <Image
-                src="/images/landscape-layer-04-cyclist.png"
+                src="/images/landscape-layer-04-cyclist.webp"
                 alt=""
                 fill
                 className="object-cover"
@@ -146,7 +146,7 @@ export function Landscape() {
               className="absolute inset-0"
             >
               <Image
-                src="/images/landscape-layer-06-people-mother-child.png"
+                src="/images/landscape-layer-06-people-mother-child.webp"
                 alt=""
                 fill
                 className="object-cover"
@@ -158,7 +158,7 @@ export function Landscape() {
               className="absolute inset-0"
             >
               <Image
-                src="/images/landscape-layer-07-people-umbrella.png"
+                src="/images/landscape-layer-07-people-umbrella.webp"
                 alt=""
                 fill
                 className="object-cover"
@@ -170,7 +170,7 @@ export function Landscape() {
               className="absolute inset-0"
             >
               <Image
-                src="/images/landscape-layer-08-people-dogwalker.png"
+                src="/images/landscape-layer-08-people-dogwalker.webp"
                 alt=""
                 fill
                 className="object-cover"
@@ -183,7 +183,7 @@ export function Landscape() {
               className="absolute inset-0"
             >
               <Image
-                src="/images/landscape-layer-05-title.png"
+                src="/images/landscape-layer-05-title.webp"
                 alt=""
                 fill
                 className="object-cover"
@@ -197,7 +197,7 @@ export function Landscape() {
               className="absolute inset-0 will-change-transform"
             >
               <Image
-                src="/images/landscape-layer-09-hand-pencil.png"
+                src="/images/landscape-layer-09-hand-pencil.webp"
                 alt=""
                 fill
                 className="object-cover"
@@ -211,7 +211,7 @@ export function Landscape() {
           <motion.div {...animate(0.3)} className="mt-8 flex justify-center">
             <div className="relative w-full max-w-4xl">
               <Image
-                src="/images/landscape-planting-caption.png"
+                src="/images/landscape-planting-caption.webp"
                 alt="マスタープラン（全体計画）に示す植栽は、大切な景観ポイントです。シンボルツリー等、その他の中木と低木や地被植物を適切に配置し、それらを組み合わせることで美しいまちなみとして周辺環境へと繋がっていきます。"
                 width={1200}
                 height={60}
@@ -230,7 +230,7 @@ export function Landscape() {
               <div className="relative w-full aspect-[4/3] mb-6 flex items-center justify-center">
                 <div className="relative w-[65%] h-full">
                   <Image
-                    src="/images/landscape-building-layout.png"
+                    src="/images/landscape-building-layout.webp"
                     alt="建物配置の計画図 - 風通し、日差し、南庭を考慮した配置"
                     fill
                     className="object-contain"
@@ -255,7 +255,7 @@ export function Landscape() {
               <div className="relative w-full aspect-[4/3] mb-6 flex items-center justify-center">
                 <div className="relative w-3/4 h-full">
                   <Image
-                    src="/images/landscape-privacy.png"
+                    src="/images/landscape-privacy.webp"
                     alt="プライバシー配慮の設計図 - 隣地境界線より2.5m未満の開口部は不可視なものに"
                     fill
                     className="object-contain"
@@ -279,7 +279,7 @@ export function Landscape() {
               </h3>
               <div className="mb-6 relative w-full aspect-[1848/933] overflow-hidden">
                 <Image
-                  src="/images/landscape-greenery.jpg"
+                  src="/images/landscape-greenery.webp"
                   alt="豊かな緑に囲まれた街並みを歩く家族"
                   fill
                   className="object-cover"
@@ -300,7 +300,7 @@ export function Landscape() {
               </h3>
               <div className="mb-6">
                 <Image
-                  src="/images/landscape-lighting.png"
+                  src="/images/landscape-lighting.webp"
                   alt="外灯で美しくライトアップされた夜の街並みイラスト"
                   width={1848}
                   height={933}

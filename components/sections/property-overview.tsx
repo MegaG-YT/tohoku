@@ -15,7 +15,7 @@ export function PropertyOverview() {
         id="property-overview"
         className="scroll-mt-32 py-10 md:py-16"
         style={{
-          backgroundImage: "url('/images/outline-section-bg.png')",
+          backgroundImage: "url('/images/outline-section-bg.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

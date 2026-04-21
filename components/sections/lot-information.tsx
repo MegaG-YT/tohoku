@@ -35,7 +35,7 @@ export function LotInformation() {
     <section id="lot-information" className="scroll-mt-32">
       <div ref={ref} className="relative py-16 md:py-24">
         <Image
-          src="/images/lot-bg-edited.png"
+          src="/images/lot-bg-edited.webp"
           alt=""
           fill
           className="object-cover"
@@ -110,7 +110,7 @@ export function LotInformation() {
             {...animate(0.3)}
           >
             <Image
-              src="/images/lot-plan-combined.png"
+              src="/images/lot-plan-combined.webp"
               alt="全体区画図 - 17区画の配置図。各区画の面積と番号を表示"
               width={1200}
               height={1800}

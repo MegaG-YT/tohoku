@@ -13,7 +13,7 @@ export function AssetValue() {
     <section id="asset-value" className="relative scroll-mt-32 overflow-hidden min-h-[780px] md:min-h-0" ref={ref}>
       {/* Full-size aerial photo — zoomed 5% extra, clipping sides and bottom */}
       <Image
-        src="/images/asset-value-map.png"
+        src="/images/asset-value-map.webp"
         alt="福島市泉エリアの航空写真と立地適正化計画の区域図"
         width={3840}
         height={3597}
