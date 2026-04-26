@@ -27,7 +27,7 @@ export function RoomPlan() {
         <div>
           <div
             className="flex items-center gap-4 md:gap-6 px-4 md:px-8 py-4 md:py-5 mb-0"
-            style={{ background: "linear-gradient(135deg, #1e4a8a 0%, #0f2548 60%, #1b3a6b 100%)" }}
+            style={{ background: "transparent" }}
           >
             {/* 区画 + A棟 box */}
             <div className="flex items-center gap-2 md:gap-3 shrink-0">
