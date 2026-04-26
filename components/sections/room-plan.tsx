@@ -13,6 +13,16 @@ export function RoomPlan() {
         sizes="100vw"
       />
       <div className="relative z-10 mx-auto max-w-5xl px-4 pt-16 md:pt-24 space-y-16 md:space-y-24">
+        {/* 間取図 label */}
+        <div className="flex justify-center">
+          <span
+            className="border border-[#1b3a6b] px-6 py-2 text-sm md:text-base tracking-[0.2em] text-[#1b3a6b]"
+            style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
+          >
+            間取図
+          </span>
+        </div>
+
         {/* A棟 */}
         <div>
           <div
