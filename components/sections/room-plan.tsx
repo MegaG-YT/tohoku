@@ -78,22 +78,121 @@ export function RoomPlan() {
           </div>
         </div>
 
-        <Image
-            src="/images/room-plan-b.webp"
-            alt="ROOM PLAN B - 間取り図"
-            width={1320}
-            height={1574}
-            className="mx-auto h-auto w-full"
-            sizes="(max-width: 768px) 100vw, 1024px"
-          />
-        <Image
-          src="/images/room-plan-c.webp"
-          alt="ROOM PLAN C - 間取り図"
-          width={1320}
-          height={1637}
-          className="mx-auto h-auto w-full"
-          sizes="(max-width: 768px) 100vw, 1024px"
-        />
+        {/* B棟 */}
+        <div>
+          <div className="relative">
+            <div className="absolute top-[167px] left-1/2 -translate-x-1/2 z-10">
+              <span
+                className="border border-gray-400 px-6 py-2 text-sm md:text-base tracking-[0.2em] text-gray-500"
+                style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
+              >
+                間取図
+              </span>
+            </div>
+            <div className="absolute top-8 left-4 md:left-8 z-10 flex items-center gap-4 md:gap-6">
+              <div className="flex items-center gap-2 md:gap-3">
+                <span className="text-white text-base md:text-lg font-bold tracking-widest" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>区画</span>
+                <div className="bg-white rounded-lg px-3 md:px-5 py-1.5 md:py-2">
+                  <span className="text-3xl md:text-5xl font-bold text-[#1b3a6b]" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>B棟</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 md:gap-4 scale-[1.2] origin-left">
+                <div className="flex items-center gap-2 md:gap-4">
+                  <div className="border border-white/50 px-2 py-1 text-center">
+                    <span className="text-white text-[10px] md:text-xs leading-tight block tracking-wider" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>建物</span>
+                    <span className="text-white text-[10px] md:text-xs leading-tight block tracking-wider" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>面積</span>
+                  </div>
+                  <span className="text-white text-2xl md:text-4xl font-bold tracking-tight" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+                    100.98<span className="text-lg md:text-2xl">㎡</span>
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 md:gap-4">
+                  <div className="border border-white/50 px-2 py-1 text-center">
+                    <span className="text-white text-[10px] md:text-xs leading-tight block tracking-wider" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>区画</span>
+                    <span className="text-white text-[10px] md:text-xs leading-tight block tracking-wider" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>面積</span>
+                  </div>
+                  <span className="text-white text-2xl md:text-4xl font-bold tracking-tight" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+                    193.89<span className="text-lg md:text-2xl">㎡</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="absolute bottom-[400px] left-1/2 -translate-x-1/2 z-10">
+              <span
+                className="border border-gray-400 px-6 py-2 text-sm md:text-base tracking-[0.2em] text-gray-500"
+                style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
+              >
+                完成予想バース
+              </span>
+            </div>
+            <Image
+              src="/images/room-plan-b.webp"
+              alt="ROOM PLAN B - 間取り図"
+              width={1320}
+              height={1574}
+              className="mx-auto h-auto w-full"
+              sizes="(max-width: 768px) 100vw, 1024px"
+            />
+          </div>
+        </div>
+
+        {/* C棟 */}
+        <div>
+          <div className="relative">
+            <div className="absolute top-[167px] left-1/2 -translate-x-1/2 z-10">
+              <span
+                className="border border-gray-400 px-6 py-2 text-sm md:text-base tracking-[0.2em] text-gray-500"
+                style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
+              >
+                間取図
+              </span>
+            </div>
+            <div className="absolute top-8 left-4 md:left-8 z-10 flex items-center gap-4 md:gap-6">
+              <div className="flex items-center gap-2 md:gap-3">
+                <span className="text-white text-base md:text-lg font-bold tracking-widest" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>区画</span>
+                <div className="bg-white rounded-lg px-3 md:px-5 py-1.5 md:py-2">
+                  <span className="text-3xl md:text-5xl font-bold text-[#1b3a6b]" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>C棟</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 md:gap-4 scale-[1.2] origin-left">
+                <div className="flex items-center gap-2 md:gap-4">
+                  <div className="border border-white/50 px-2 py-1 text-center">
+                    <span className="text-white text-[10px] md:text-xs leading-tight block tracking-wider" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>建物</span>
+                    <span className="text-white text-[10px] md:text-xs leading-tight block tracking-wider" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>面積</span>
+                  </div>
+                  <span className="text-white text-2xl md:text-4xl font-bold tracking-tight" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+                    97.48<span className="text-lg md:text-2xl">㎡</span>
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 md:gap-4">
+                  <div className="border border-white/50 px-2 py-1 text-center">
+                    <span className="text-white text-[10px] md:text-xs leading-tight block tracking-wider" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>区画</span>
+                    <span className="text-white text-[10px] md:text-xs leading-tight block tracking-wider" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>面積</span>
+                  </div>
+                  <span className="text-white text-2xl md:text-4xl font-bold tracking-tight" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+                    180.81<span className="text-lg md:text-2xl">㎡</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="absolute bottom-[400px] left-1/2 -translate-x-1/2 z-10">
+              <span
+                className="border border-gray-400 px-6 py-2 text-sm md:text-base tracking-[0.2em] text-gray-500"
+                style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
+              >
+                完成予想バース
+              </span>
+            </div>
+            <Image
+              src="/images/room-plan-c.webp"
+              alt="ROOM PLAN C - 間取り図"
+              width={1320}
+              height={1637}
+              className="mx-auto h-auto w-full"
+              sizes="(max-width: 768px) 100vw, 1024px"
+            />
+          </div>
+        </div>
       </div>
     </section>
   )
