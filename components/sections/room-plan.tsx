@@ -60,7 +60,7 @@ export function RoomPlan() {
           <div className="relative">
             <div className="absolute top-8 left-4 md:left-8 z-10 flex items-center gap-2 md:gap-3">
               <span className="text-white/70 text-base md:text-lg font-bold tracking-widest" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>区画</span>
-              <div className="bg-white px-3 md:px-5 py-1.5 md:py-2">
+              <div className="bg-white rounded-lg px-3 md:px-5 py-1.5 md:py-2">
                 <span className="text-3xl md:text-5xl font-bold text-[#1b3a6b]" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>A棟</span>
               </div>
             </div>
