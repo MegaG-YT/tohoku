@@ -49,27 +49,14 @@ export function LotInformation() {
         />
         <div className="relative z-10 mx-auto max-w-5xl px-4">
           {/* Title */}
-          <motion.div className="text-center mb-10 md:mb-14" {...animate(0)}>
-            <h2
-              className="text-2xl md:text-4xl tracking-[0.1em] text-black"
-              style={{ fontFamily: SERIF_FONT }}
-            >
-              全体区画図／販売区画図
-            </h2>
-            <p
-              className="mt-2 text-base md:text-xl tracking-[0.05em] text-black"
-              style={{ fontFamily: SERIF_FONT }}
-            >
-              Real estate plot plan
-            </p>
-          </motion.div>
-
-          {/* Sales summary banner */}
-          <motion.div className="mb-8" {...animate(0.1)}>
-            <div className="mx-auto max-w-md bg-[#555555]/80 py-2 px-4 text-center">
-              <p className="text-sm md:text-base text-white tracking-widest" style={{ fontFamily: SERIF_FONT }}>
-                全<span className="text-lg md:text-xl font-bold">17</span>区画 / <span className="text-lg md:text-xl font-bold">2</span>区画販売中
-              </p>
+          <motion.div className="mb-10 md:mb-14" {...animate(0)}>
+            <div className="mx-auto w-full max-w-3xl bg-[#101F03] py-10 md:py-16 px-6 text-center">
+              <h2
+                className="text-2xl md:text-4xl tracking-[0.1em] text-white"
+                style={{ fontFamily: SERIF_FONT }}
+              >
+                全体区画図／販売区画図
+              </h2>
             </div>
           </motion.div>
 
