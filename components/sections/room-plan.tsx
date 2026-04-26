@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export function RoomPlan() {
   return (
-    <section id="room-plan" className="scroll-mt-32 relative w-full" style={{ aspectRatio: "1920 / 5666" }}>
+    <section id="room-plan" className="scroll-mt-32 relative w-full" style={{ aspectRatio: "1920 / 5949" }}>
       <Image
         src="/images/room-plan-bg.webp"
         alt=""
