@@ -59,7 +59,7 @@ export function RoomPlan() {
               </div>
             </div>
             {/* 免責文 + 完成予想バース — bottom of room-plan-a */}
-            <div className="absolute bottom-[400px] left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3 w-[90%]">
+            <div className="absolute bottom-[420px] left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3 w-[90%]">
               <p
                 className="text-[7px] md:text-[8px] text-gray-500 text-center leading-relaxed"
                 style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
