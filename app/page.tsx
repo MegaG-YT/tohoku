@@ -6,6 +6,7 @@ import { SmartResilience } from "@/components/sections/smart-resilience"
 import { SurroundingEnvironment } from "@/components/sections/surrounding-environment"
 import { AccessSection } from "@/components/sections/access-section"
 import { LotInformation } from "@/components/sections/lot-information"
+import { RoomPlan } from "@/components/sections/room-plan"
 import { PropertyOverview } from "@/components/sections/property-overview"
 import { Footer } from "@/components/sections/footer"
 import { MobileCtaBar } from "@/components/shared/cta-buttons"
@@ -32,6 +33,7 @@ export default function Home() {
         </section>
         <AccessSection />
         <LotInformation />
+        <RoomPlan />
         <PropertyOverview />
       </main>
       <Footer />
