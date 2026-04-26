@@ -13,6 +13,22 @@ export function RoomPlan() {
         sizes="100vw"
       />
       <div className="relative z-10 mx-auto max-w-5xl px-4 pt-16 md:pt-24 space-y-16 md:space-y-24">
+        {/* Section heading */}
+        <div className="text-center">
+          <p
+            className="text-sm md:text-base tracking-[0.3em] text-[#1a1a1a] mb-3"
+            style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
+          >
+            間取り
+          </p>
+          <h2
+            className="text-5xl md:text-7xl lg:text-8xl text-[#1a1a1a]"
+            style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
+          >
+            Room plan
+          </h2>
+        </div>
+
         {/* A棟 */}
         <Image
           src="/images/room-plan-a.webp"
