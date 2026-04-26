@@ -11,6 +11,12 @@ const SALE_LOTS = [
   { no: "No.4", area: "167.98㎡（50.81坪）", price: "12,700,000円" },
 ]
 
+const BUILDING_LOTS = [
+  { no: "A棟", building: "99.34㎡", area: "227.24㎡" },
+  { no: "B棟", building: "100.98㎡", area: "183.89㎡" },
+  { no: "C棟", building: "97.48㎡", area: "180.81㎡" },
+]
+
 export function LotInformation() {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, margin: "-100px 0px" })
@@ -67,9 +73,12 @@ export function LotInformation() {
             </div>
           </motion.div>
 
-          {/* Sales table */}
-          <motion.div className="mx-auto max-w-md mb-10 md:mb-14" {...animate(0.15)}>
-            <table className="w-full text-xs md:text-sm border-collapse" style={{ fontFamily: SERIF_FONT }}>
+          {/* Tables: sales lots + buildings, side-by-side on desktop */}
+          <motion.div
+            className="mx-auto max-w-4xl mb-10 md:mb-14 flex flex-col md:flex-row md:items-start md:justify-center gap-6 md:gap-8"
+            {...animate(0.15)}
+          >
+            <table className="w-full md:w-auto text-xs md:text-sm border-collapse" style={{ fontFamily: SERIF_FONT }}>
               <thead>
                 <tr className="bg-[#555555]/80 text-white">
                   <th className="py-2 px-3 md:px-6 font-normal tracking-wider border border-white/20">区画No.</th>
@@ -83,6 +92,25 @@ export function LotInformation() {
                     <td className="py-2 px-3 md:px-6 text-center border border-gray-300">{lot.no}</td>
                     <td className="py-2 px-3 md:px-6 text-center border border-gray-300">{lot.area}</td>
                     <td className="py-2 px-3 md:px-6 text-center border border-gray-300">{lot.price}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+
+            <table className="w-full md:w-auto text-xs md:text-sm border-collapse" style={{ fontFamily: SERIF_FONT }}>
+              <thead>
+                <tr className="bg-[#555555]/80 text-white">
+                  <th className="py-2 px-3 md:px-6 font-normal tracking-wider border border-white/20">区画</th>
+                  <th className="py-2 px-3 md:px-6 font-normal tracking-wider border border-white/20">建物面積</th>
+                  <th className="py-2 px-3 md:px-6 font-normal tracking-wider border border-white/20">区画面積</th>
+                </tr>
+              </thead>
+              <tbody>
+                {BUILDING_LOTS.map((lot) => (
+                  <tr key={lot.no} className="bg-white/80 text-[var(--brand-text)]">
+                    <td className="py-2 px-3 md:px-6 text-center border border-gray-300">{lot.no}</td>
+                    <td className="py-2 px-3 md:px-6 text-center border border-gray-300">{lot.building}</td>
+                    <td className="py-2 px-3 md:px-6 text-center border border-gray-300">{lot.area}</td>
                   </tr>
                 ))}
               </tbody>
