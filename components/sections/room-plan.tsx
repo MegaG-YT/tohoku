@@ -146,6 +146,14 @@ export function RoomPlan() {
                 完成予想バース
               </span>
             </div>
+            <div className="absolute bottom-[20px] left-1/2 -translate-x-1/2 z-10 w-[90%]">
+              <p
+                className="text-[7px] md:text-[8px] text-gray-500 text-center leading-relaxed"
+                style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
+              >
+                ※掲載の完成予想CGは、計画段階の図面を基に描き起こしたもので実際とは異なります。尚、植栽は実際に植樹する樹形、枝ぶり、葉や花の色合いとは異なる場合があり、特定の季節の状況を示すものではありません。竣工時には完成予想CG程度には成長しておりません。予めご了承ください。施工上やむをえない変更が生じた場合は建物竣工時の状態を優先します。販売価格に家具・照明・調度品・エアコン・備品・車等は含まれておりません。
+              </p>
+            </div>
             <Image
               src="/images/room-plan-b.webp"
               alt="ROOM PLAN B - 間取り図"
