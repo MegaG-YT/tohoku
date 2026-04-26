@@ -29,6 +29,14 @@ export function RoomPlan() {
           className="mx-auto h-auto w-full"
           sizes="(max-width: 768px) 100vw, 1024px"
         />
+        <Image
+          src="/images/room-plan-c.webp"
+          alt="ROOM PLAN C - 間取り図"
+          width={1320}
+          height={759}
+          className="mx-auto h-auto w-full"
+          sizes="(max-width: 768px) 100vw, 1024px"
+        />
       </div>
     </section>
   )
