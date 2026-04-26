@@ -69,24 +69,25 @@ export function RoomPlan() {
           </div>
         </div>
 
-        {/* 完成予想バース label */}
-        <div className="flex justify-center">
-          <span
-            className="border border-gray-400 px-6 py-2 text-sm md:text-base tracking-[0.2em] text-gray-500"
-            style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
-          >
-            完成予想バース
-          </span>
+        <div className="relative">
+          {/* 完成予想バース — overlapping top of render image */}
+          <div className="absolute top-[50px] left-1/2 -translate-x-1/2 z-10">
+            <span
+              className="border border-gray-400 px-6 py-2 text-sm md:text-base tracking-[0.2em] text-gray-500"
+              style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
+            >
+              完成予想バース
+            </span>
+          </div>
+          <Image
+            src="/images/room-plan-b.webp"
+            alt="ROOM PLAN B - 間取り図"
+            width={1320}
+            height={1574}
+            className="mx-auto h-auto w-full"
+            sizes="(max-width: 768px) 100vw, 1024px"
+          />
         </div>
-
-        <Image
-          src="/images/room-plan-b.webp"
-          alt="ROOM PLAN B - 間取り図"
-          width={1320}
-          height={1574}
-          className="mx-auto h-auto w-full"
-          sizes="(max-width: 768px) 100vw, 1024px"
-        />
         <Image
           src="/images/room-plan-c.webp"
           alt="ROOM PLAN C - 間取り図"
