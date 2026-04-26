@@ -13,20 +13,19 @@ export function RoomPlan() {
         sizes="100vw"
       />
       <div className="relative z-10 mx-auto max-w-5xl px-4 pt-16 md:pt-24 space-y-16 md:space-y-24">
-        {/* 間取図 label */}
-        <div className="flex justify-center">
-          <span
-            className="border border-gray-400 px-6 py-2 text-sm md:text-base tracking-[0.2em] text-gray-500"
-            style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
-          >
-            間取図
-          </span>
-        </div>
-
         {/* A棟 */}
         <div>
-          {/* Image with A棟 + 建物面積 + 区画面積 overlapping top */}
+          {/* Image with A棟 + 建物面積 + 区画面積 + 間取図 overlapping */}
           <div className="relative">
+            {/* 間取図 label — ~150px below A棟 (top-8 = 32px) */}
+            <div className="absolute top-[182px] left-1/2 -translate-x-1/2 z-10">
+              <span
+                className="border border-gray-400 px-6 py-2 text-sm md:text-base tracking-[0.2em] text-gray-500"
+                style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}
+              >
+                間取図
+              </span>
+            </div>
             <div className="absolute top-8 left-4 md:left-8 z-10 flex items-center gap-4 md:gap-6">
               {/* 区画 + A棟 */}
               <div className="flex items-center gap-2 md:gap-3">
