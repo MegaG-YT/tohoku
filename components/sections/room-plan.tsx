@@ -4,7 +4,7 @@ import Image from "next/image"
 
 export function RoomPlan() {
   return (
-    <section id="room-plan" className="scroll-mt-32 relative w-full aspect-[1920/6400] md:aspect-[1920/5666]">
+    <section id="room-plan" className="scroll-mt-32 relative w-full aspect-[1920/5666]">
       <Image
         src="/images/room-plan-bg.webp"
         alt=""
@@ -12,7 +12,7 @@ export function RoomPlan() {
         className="object-cover"
         sizes="100vw"
       />
-      <div className="relative z-10 mx-auto max-w-5xl px-4 pt-16 md:pt-24 space-y-16 md:space-y-24">
+      <div className="relative z-10 mx-auto max-w-5xl px-4 pt-16 md:pt-24 space-y-8 md:space-y-12">
         {/* Section heading */}
         <div className="text-center">
           <p
