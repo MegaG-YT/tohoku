@@ -25,24 +25,7 @@ export function RoomPlan() {
 
         {/* A棟 */}
         <div>
-          {/* Stats bar */}
-          <div
-            className="flex items-center gap-4 md:gap-6 px-4 md:px-8 py-4 md:py-5"
-            style={{ background: "transparent" }}
-          >
-            {/* 区画面積 */}
-            <div className="flex items-center gap-2 md:gap-4">
-              <div className="border border-white/50 px-2 py-1 text-center">
-                <span className="text-white text-[10px] md:text-xs leading-tight block tracking-wider" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>区画</span>
-                <span className="text-white text-[10px] md:text-xs leading-tight block tracking-wider" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>面積</span>
-              </div>
-              <span className="text-white text-2xl md:text-4xl font-bold tracking-tight" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
-                227.24<span className="text-lg md:text-2xl">㎡</span>
-              </span>
-            </div>
-          </div>
-
-          {/* Image with A棟 + 建物面積 overlapping top, vertically centered together */}
+          {/* Image with A棟 + 建物面積 + 区画面積 overlapping top */}
           <div className="relative">
             <div className="absolute top-8 left-4 md:left-8 z-10 flex items-center gap-4 md:gap-6">
               {/* 区画 + A棟 */}
@@ -60,6 +43,16 @@ export function RoomPlan() {
                 </div>
                 <span className="text-white text-2xl md:text-4xl font-bold tracking-tight" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
                   99.34<span className="text-lg md:text-2xl">㎡</span>
+                </span>
+              </div>
+              {/* 区画面積 */}
+              <div className="flex items-center gap-2 md:gap-4">
+                <div className="border border-white/50 px-2 py-1 text-center">
+                  <span className="text-white text-[10px] md:text-xs leading-tight block tracking-wider" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>区画</span>
+                  <span className="text-white text-[10px] md:text-xs leading-tight block tracking-wider" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>面積</span>
+                </div>
+                <span className="text-white text-2xl md:text-4xl font-bold tracking-tight" style={{ fontFamily: '"游明朝", "Yu Mincho", "Hiragino Mincho Pro", serif' }}>
+                  227.24<span className="text-lg md:text-2xl">㎡</span>
                 </span>
               </div>
             </div>
